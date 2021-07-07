@@ -15,10 +15,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="前端课件资源">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1617200451011">
+<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1617200451908">
 <meta property="article:published_time" content="2021-07-02T12:40:59.000Z">
-<meta property="article:modified_time" content="2021-07-02T12:42:37.868Z">
+<meta property="article:modified_time" content="2021-07-05T13:24:31.634Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1617200451011">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -189,7 +192,90 @@
         <h2 id="前端课件资源"><a href="#前端课件资源" class="headerlink" title="前端课件资源"></a>前端课件资源</h2><span id="more"></span>
 
 <p>我们学习新课web前端，学习笔记在<a target="_blank" rel="noopener" href="https://itgeek.baklib-free.com/">https://itgeek.baklib-free.com</a></p>
+<h3 id="学习-常见样式-："><a href="#学习-常见样式-：" class="headerlink" title="学习(常见样式)："></a>学习(常见样式)：</h3><p>消除body的边距：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;magin:<span class="number">0px</span>;&#125;</span><br></pre></td></tr></table></figure>
 
+<p>div、p、table等块状元素设置height：50%在高级浏览器是有可能不起作用的，建议改为height：50vh。表示占可视窗口高度的50%，是占窗口的50%，而不是元素框的50%</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">height</span>：<span class="number">50%</span>;<span class="comment">/*高级浏览器基本不支持*/</span></span><br><span class="line"><span class="attribute">height</span>：<span class="number">50vh</span>;<span class="comment">/*建议使用*/</span></span><br></pre></td></tr></table></figure>
+
+<p>p标签的文本缩进，使用属性text-indent：2em。表示首行缩进两个字符</p>
+<p>text-decoration属性的值包括：underline(下划线)|overline(上划线)|line-through(中间贯穿线)</p>
+<p>letter-spacing属性(设置文字之间的距离)，例如：letter-spacing：0.5em</p>
+<p>div、table水平居中：margin-left: auto;margin-right: auto;也可以写成margin: auto</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line"><span class="attribute">margin-left</span>: auto;</span><br><span class="line"><span class="attribute">margin-right</span>: auto;</span><br><span class="line"><span class="comment">/*也可以直接写成margin: auto*/</span></span><br><span class="line"><span class="comment">/*margin: auto;*/</span></span><br><span class="line"><span class="comment">/*margin: 0 auto;中的0代表上下之间元素块之间的距离，如10px代表距离上一个元素为10px的距离*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>table表格细边框：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line"><span class="attribute">border</span>: <span class="number">1px</span> solid black; <span class="comment">/*设置边框*/</span></span><br><span class="line"><span class="attribute">border-collapse</span>: collapse; <span class="comment">/*将边框合并*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">td</span>,<span class="selector-tag">th</span> &#123;</span><br><span class="line"><span class="attribute">border</span>: <span class="number">1px</span> solid black; <span class="comment">/*设置边框*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>列表去除修饰符</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span>&#123;</span><br><span class="line">    <span class="attribute">list-style-type</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>背景图像的位置</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*background-position:设置或检索对象的背景图像位置*/</span></span><br><span class="line"><span class="comment">/*不限于div元素，任何可以有背景的元素*/</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;  </span><br><span class="line"></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;   <span class="attribute">height</span>: <span class="number">500px</span>;   </span><br><span class="line"></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../imgs/tly.jpg</span>);   </span><br><span class="line"></span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;   </span><br><span class="line"></span><br><span class="line">  <span class="attribute">background-position</span>: center;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="css盒子模型"><a href="#css盒子模型" class="headerlink" title="css盒子模型"></a>css盒子模型</h3><p>所有HTML元素可以看作盒子，在CSS中，”box model”这一术语是用来设计和布局时使用。</p>
+<p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</p>
+<p>盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。</p>
+<p>下面的图片说明了盒子模型(Box Model)：</p>
+<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1617200451011"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1617200451011" alt="img"></a></p>
+<p><strong>Content(内容)：</strong>盒子里的内容，包含文本，图像等 <strong>Padding(内边距):</strong> 内容到边框之间的距离，内边距也叫填充、内补白</p>
+<p><strong>Border(边框)：</strong>内边距的边缘</p>
+<p><strong>Margin(外边距):</strong> 与周围相邻元素之间的距离，外边距也叫外补白</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*padding(内边距)*/</span></span><br><span class="line"><span class="attribute">padding</span>:<span class="number">10px</span>(上) <span class="number">20px</span>(右) <span class="number">30px</span>(下) <span class="number">40px</span>(左);<span class="comment">/*设置四个参数时*/</span></span><br><span class="line"><span class="attribute">padding</span>:<span class="number">10px</span>(上) <span class="number">20px</span>(左右) <span class="number">10px</span>(下);<span class="comment">/*设置三个参数时*/</span></span><br><span class="line"><span class="attribute">padding</span>:<span class="number">10px</span>(上下) <span class="number">20px</span>(左右);<span class="comment">/*设置两个参数时*/</span></span><br><span class="line"><span class="attribute">padding</span>:<span class="number">10px</span>(上下左右);<span class="comment">/*设置一个参数时*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*margin(外边距)*/</span></span><br><span class="line"><span class="comment">/*基本写法与padding一样，特殊地为居中写法*/</span></span><br><span class="line"><span class="attribute">margin</span>:auto;<span class="comment">/*水平居中*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="元素的分类"><a href="#元素的分类" class="headerlink" title="元素的分类"></a>元素的分类</h3><p>块级元素和行内元素</p>
+<h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><p>常见的块级元素：div、p、h1-h6、ul、ol、li等。块级元素一般是其他元素的容器。</p>
+<p>块级元素具有以下特点：</p>
+<p>1）总是在新行上开始，<strong>占据一整行</strong>；</p>
+<p>2）高度以及外边距和内边距都可控制；</p>
+<p>3）宽始默认是与浏览器宽度一样，与内容无关；</p>
+<p>4）它可以容纳内联元素和其他块元素。</p>
+<p>设置display:block可以将元素显示为块级元素。</p>
+<p>例如：如下的代码就是将内联元素a转成块级元素，从而使a元素具有块元素的特点。</p>
+<p>a { display: block }</p>
+<h4 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h4><p>常见的行内元素有：a，strong，span, sup,sub等。</p>
+<p>行内元素的特点：</p>
+<ol>
+<li>和其他元素可以都在一行上；</li>
+</ol>
+<p>2）高度及外边距部分可改变(<strong>只能设置左右方向的margin</strong>)；</p>
+<p>3）宽度只与内容有关；（<strong>无法设置宽度</strong>）</p>
+<p>4）行内元素只能容纳文本或者其他行内元素。</p>
+<p>设置display:inline可以将块级元素显示为内联元素</p>
+<p>例如：如下的代码就是将块级元素div转成内联元素，从而使div元素具有内联元素的特点。</p>
+<p>div{ display:inline; }</p>
+<h4 id="行内块级元素"><a href="#行内块级元素" class="headerlink" title="行内块级元素"></a>行内块级元素</h4><p>内联块级元既有块级元素的特点，又有内联元素的特点。可以与其他行内元素位于同一行，宽度由内容的长度控制，但可以设置宽（width）和高（height），也可以设置四个方向的padding和margin值。</p>
+<p>常见的内联块级元素有img和input。</p>
+<p>内联块级元素的特点：</p>
+<p>1）和其它元素可以都在一行上；</p>
+<p>2）高度以及外边距和内边距都可控制；</p>
+<p>3）宽度与内容有关，但可以设置宽度。</p>
+<p>4）设置display:inline-block可以将元素设置为内联块级元素</p>
+<p>例如：如下的代码就是将块级元素div转成内联块级元素，从而使div元素具有内联块级元素的特点。</p>
+<p>div { display:inline-block; } </p>
+<p>补充：display属性的值是none时，元素将会消失(物理空间没有了)，其后的元素会占据它原来的位置</p>
+<h3 id="定位-position"><a href="#定位-position" class="headerlink" title="定位(position)"></a>定位(position)</h3><p><strong>文档流</strong>：自窗体自上而下分成一行一行，并在每行中按从左到右的顺序排放元素。</p>
+<p>默认情况下，所有元素都处在文档流中，四种情况将使得元素离开文档流：浮动float、绝对定位absolute、固定定位fixed、元素不显示display:none，这种情况不占文档流的空间，而普通元素的位置基于文档流。</p>
+<p>辅助属性：</p>
+<p>position属性只是规定定位类型，要想此元素能按照希望的位置显示，还需要使用下面的属性：</p>
+<p>left ： 表示向元素的左边插入多少像素，使元素向右移动多少像素。</p>
+<p>right ：表示向元素的右边插入多少像素，使元素向左移动多少像素。</p>
+<p>top ：表示向元素的上方插入多少像素，使元素向下移动多少像素。</p>
+<p>bottom ：表示向元素的下方插入多少像素，使元素向上移动多少像素。</p>
+<p>上面属性的值可以为负。</p>
+<h4 id="相对定位-relative"><a href="#相对定位-relative" class="headerlink" title="相对定位(relative)"></a>相对定位(<strong>relative</strong>)</h4><p>相对定位是不脱离文档流的布局，只改变自身的位置，在文档流原先的位置<strong>遗留空白区域</strong>。<strong>定位的起始位置为此元素原先在文档流的位置。（即相对于自身的定位）</strong></p>
+<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1617200451908"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1617200451908" alt="img"></a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">例如：</span><br><span class="line"><span class="selector-id">#f2</span> &#123;</span><br><span class="line">    <span class="comment">/*相对定位：以元素原来的位置作为参照位置，进行平移的定位*/</span></span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="comment">/* 让元素相对于它原来位置向下平移50px */</span></span><br><span class="line">    <span class="attribute">top</span>:<span class="number">50px</span>;</span><br><span class="line">    <span class="comment">/* 让元素相对于它原来位置向右平移50px */</span></span><br><span class="line">    <span class="attribute">left</span>:<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="绝对定位-absolute"><a href="#绝对定位-absolute" class="headerlink" title="绝对定位(absolute)"></a>绝对定位(<strong>absolute</strong>)</h4><p>绝对定位是脱离文档流的布局，<strong>遗留下来的空间由后面的元素填充</strong>（<strong>物理空间没有了</strong>）。<strong>定位的参考位置为最近的父元素位置，否则为body本身</strong>。</p>
+<p>使用绝对定位时，若其父元素不是body时，<strong>父元素要设置为相对定位(子绝父相)</strong></p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
       
 
       
