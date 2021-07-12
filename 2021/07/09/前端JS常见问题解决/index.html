@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>前端JS常见问题解决 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="JS中document常见用法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端JS常见问题解决">
+<meta property="og:url" content="http://example.com/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JS中document常见用法">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-09T15:29:26.000Z">
+<meta property="article:modified_time" content="2021-07-11T15:17:36.377Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -162,81 +166,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JQuery学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-前端JS常见问题解决" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/">JQuery学习</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-07-12T02:47:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第8章-JQuery"><a href="#第8章-JQuery" class="headerlink" title="第8章 JQuery"></a>第8章 JQuery</h2><p>jQuery插件库：<a target="_blank" rel="noopener" href="https://www.jq22.com/">jQuery插件库-收集最全最新最好的jQuery插件 (jq22.com)</a></p>
-        
-          <a class="article-more-a" href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端JS常见问题解决" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">前端JS常见问题解决</a>
+    <h1 class="article-title" itemprop="name">
+      前端JS常见问题解决
     </h1>
   
 
@@ -249,12 +186,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="JS中document常见用法"><a href="#JS中document常见用法" class="headerlink" title="JS中document常见用法"></a>JS中document常见用法</h3>
-        
-          <a class="article-more-a" href="/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/#more">more >></a>
-        
+        <h3 id="JS中document常见用法"><a href="#JS中document常见用法" class="headerlink" title="JS中document常见用法"></a>JS中document常见用法</h3><span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">web.document.write()<span class="comment">//会一直输出，不会覆盖前面输出的</span></span><br><span class="line"></span><br><span class="line">web.document.body.innerHTML = <span class="string">&quot;&quot;</span><span class="comment">//会覆盖前面输出的</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//	使用Date对象+setInterval()在网页上输出动态时间(每隔1秒就要改变秒数)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showTime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">				<span class="keyword">var</span> nowTime = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">				<span class="keyword">var</span> year = nowTime.getFullYear()</span><br><span class="line">				<span class="keyword">var</span> month = nowTime.getMonth() + <span class="number">1</span></span><br><span class="line">				<span class="keyword">var</span> date = nowTime.getDate()</span><br><span class="line">				<span class="keyword">var</span> day = nowTime.getDay()</span><br><span class="line">				<span class="keyword">var</span> hour = nowTime.getHours()</span><br><span class="line">				<span class="keyword">var</span> minutes = nowTime.getMinutes()</span><br><span class="line">				<span class="keyword">var</span> seconds = nowTime.getSeconds()</span><br><span class="line">				<span class="keyword">var</span> week = [</span><br><span class="line">					<span class="string">&#x27;星期日&#x27;</span>,</span><br><span class="line">					<span class="string">&#x27;星期一&#x27;</span>,</span><br><span class="line">					<span class="string">&#x27;星期二&#x27;</span>,</span><br><span class="line">					<span class="string">&#x27;星期三&#x27;</span>,</span><br><span class="line">					<span class="string">&#x27;星期四&#x27;</span>,</span><br><span class="line">					<span class="string">&#x27;星期五&#x27;</span>,</span><br><span class="line">					<span class="string">&#x27;星期六&#x27;</span>,</span><br><span class="line">				]</span><br><span class="line">				<span class="comment">// document.write(</span></span><br><span class="line">				<span class="comment">// 	year +</span></span><br><span class="line">				<span class="comment">// 		&#x27;-&#x27; +</span></span><br><span class="line">				<span class="comment">// 		month +</span></span><br><span class="line">				<span class="comment">// 		&#x27;-&#x27; +</span></span><br><span class="line">				<span class="comment">// 		date +</span></span><br><span class="line">				<span class="comment">// 		&#x27;&amp;nbsp;&#x27; +</span></span><br><span class="line">				<span class="comment">// 		week[day] +</span></span><br><span class="line">				<span class="comment">// 		&#x27;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x27; +</span></span><br><span class="line">				<span class="comment">// 		hour +</span></span><br><span class="line">				<span class="comment">// 		&#x27;:&#x27; +</span></span><br><span class="line">				<span class="comment">// 		minutes +</span></span><br><span class="line">				<span class="comment">// 		&#x27;:&#x27; +</span></span><br><span class="line">				<span class="comment">// 		seconds +</span></span><br><span class="line">				<span class="comment">// 		&#x27;&lt;br/&gt;&#x27;</span></span><br><span class="line">				<span class="comment">// )</span></span><br><span class="line"></span><br><span class="line">				<span class="built_in">document</span>.body.innerHTML =</span><br><span class="line">					year +</span><br><span class="line">					<span class="string">&#x27;-&#x27;</span> +</span><br><span class="line">					month +</span><br><span class="line">					<span class="string">&#x27;-&#x27;</span> +</span><br><span class="line">					date +</span><br><span class="line">					<span class="string">&#x27;&amp;nbsp;&#x27;</span> +</span><br><span class="line">					week[day] +</span><br><span class="line">					<span class="string">&#x27;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x27;</span> +</span><br><span class="line">					hour +</span><br><span class="line">					<span class="string">&#x27;:&#x27;</span> +</span><br><span class="line">					minutes +</span><br><span class="line">					<span class="string">&#x27;:&#x27;</span> +</span><br><span class="line">					seconds +</span><br><span class="line">					<span class="string">&#x27;&lt;br/&gt;&#x27;</span></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="comment">//设置定时器</span></span><br><span class="line">			<span class="built_in">setInterval</span>(<span class="string">&#x27;showTime()&#x27;</span>, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="setInterval循环定时器的使用"><a href="#setInterval循环定时器的使用" class="headerlink" title="setInterval循环定时器的使用"></a>setInterval循环定时器的使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用定时器setInterval()和clearInterval()在网页上每隔1.5s输出一句&quot;我爱你,中国&quot;,连续输出9句后， 第10句输出&quot;End&quot;，程序结束</span></span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">showLove</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		i++</span><br><span class="line">		<span class="keyword">if</span> (i == <span class="number">10</span>) &#123;</span><br><span class="line">			<span class="built_in">document</span>.write(<span class="string">&#x27;end&#x27;</span>)</span><br><span class="line">			<span class="built_in">clearInterval</span>(id)</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">document</span>.write(<span class="string">&#x27;我爱你,中国&#x27;</span> + i + <span class="string">&#x27;&lt;br/&gt;&#x27;</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> id = <span class="built_in">setInterval</span>(<span class="string">&#x27;showLove()&#x27;</span>, <span class="number">1500</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="表单操作"><a href="#表单操作" class="headerlink" title="表单操作"></a>表单操作</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">			<span class="selector-tag">table</span> &#123;</span></span><br><span class="line"><span class="css">				<span class="attribute">width</span>: <span class="number">400px</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#2ece77</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">border-collapse</span>: collapse;</span></span><br><span class="line"><span class="css">			&#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">			<span class="selector-tag">td</span> &#123;</span></span><br><span class="line"><span class="css">				<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#2ece77</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">padding</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="css">			&#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">			<span class="selector-class">.btns</span> &#123;</span></span><br><span class="line"><span class="css">				<span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="css">			&#125;</span></span><br><span class="line"><span class="css">		</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">&quot;registForm&quot;</span> <span class="attr">action</span>=<span class="string">&quot;https://www.baidu.com&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">h2</span>&gt;</span>用户注册表单<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>用户名<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span> /&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>性别<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">							<span class="attr">type</span>=<span class="string">&quot;radio&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">name</span>=<span class="string">&quot;sex&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">id</span>=<span class="string">&quot;sex1&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">value</span>=<span class="string">&quot;man&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">checked</span></span></span><br><span class="line"><span class="tag">						/&gt;</span>男</span><br><span class="line">						<span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">							<span class="attr">type</span>=<span class="string">&quot;radio&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">name</span>=<span class="string">&quot;sex&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">id</span>=<span class="string">&quot;sex2&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">value</span>=<span class="string">&quot;Woman&quot;</span></span></span><br><span class="line"><span class="tag">						/&gt;</span>女</span><br><span class="line">					<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>爱好<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">							<span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">value</span>=<span class="string">&quot;basketball&quot;</span></span></span><br><span class="line"><span class="tag">						/&gt;</span>篮球</span><br><span class="line">						<span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">							<span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">value</span>=<span class="string">&quot;foottball&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">checked</span></span></span><br><span class="line"><span class="tag">						/&gt;</span>足球</span><br><span class="line">						<span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">							<span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">value</span>=<span class="string">&quot;ppball&quot;</span></span></span><br><span class="line"><span class="tag">						/&gt;</span>乒乓球</span><br><span class="line">						<span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">							<span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span></span></span><br><span class="line"><span class="tag">							<span class="attr">value</span>=<span class="string">&quot;billard&quot;</span></span></span><br><span class="line"><span class="tag">						/&gt;</span>台球</span><br><span class="line">					<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>喜欢的城市<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;city&quot;</span> <span class="attr">id</span>=<span class="string">&quot;city&quot;</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;CQ&quot;</span>&gt;</span>重庆<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;GZ&quot;</span>&gt;</span>广州<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;WH&quot;</span>&gt;</span>武汉<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;NJ&quot;</span> <span class="attr">selected</span>&gt;</span>南京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">&quot;2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btns&quot;</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;注册&quot;</span> /&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;禁用元素&quot;</span> /&gt;</span></span><br><span class="line">					<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">			<span class="comment">//checked: 作用于表单中的复选框和单选框，用来设置或获取选中状态，未选中，值为false,否则为true</span></span></span><br><span class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="built_in">document</span>.getElementById(<span class="string">&#x27;sex1&#x27;</span>).checked) <span class="comment">//true</span></span></span><br><span class="line"><span class="javascript">			<span class="comment">// document.getElementById(&#x27;sex2&#x27;).checked = true</span></span></span><br><span class="line"><span class="javascript">			<span class="comment">// //获取复选框</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> hobbys = <span class="built_in">document</span>.getElementsByName(<span class="string">&#x27;hobby&#x27;</span>)</span></span><br><span class="line"><span class="javascript">			<span class="comment">//设置复选框被选中</span></span></span><br><span class="line"><span class="javascript">			hobbys[<span class="number">0</span>].checked = <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">			hobbys[<span class="number">2</span>].checked = <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">			<span class="comment">// //操作下拉框中选项的选中状态，用selected属性</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> city = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;city&#x27;</span>)</span></span><br><span class="line"><span class="javascript">			<span class="comment">//获取所有option元素(选项)</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> options = city.children</span></span><br><span class="line"><span class="javascript">			<span class="comment">// //设置选项被选中，selected值为true表示选项被选中，否则是未选中</span></span></span><br><span class="line"><span class="javascript">			options[<span class="number">1</span>].selected = <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">			<span class="built_in">console</span>.log(options[<span class="number">2</span>].selected) <span class="comment">//false</span></span></span><br><span class="line"><span class="javascript">			<span class="comment">// //获取文本框</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> uname = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;username&#x27;</span>)</span></span><br><span class="line"><span class="javascript">			<span class="comment">//设置文本框的内容(value)</span></span></span><br><span class="line"><span class="javascript">			uname.value = <span class="string">&#x27;Mike&#x27;</span></span></span><br><span class="line"><span class="javascript">			<span class="comment">// 禁用文本框，就是disabled=true，如果disabled为false,表示不禁用(解禁)</span></span></span><br><span class="line"><span class="javascript">			uname.disabled = <span class="literal">false</span></span></span><br><span class="line"><span class="javascript">			<span class="comment">// //禁用多个复选框</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; hobbys.length; i++) &#123;</span></span><br><span class="line"><span class="javascript">				hobbys[i].disabled = <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">			&#125;</span></span><br><span class="line"><span class="javascript">			<span class="comment">// //给表单注册onsubmit事件</span></span></span><br><span class="line"><span class="javascript">			<span class="comment">//获取表单</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> registForm = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;registForm&#x27;</span>)</span></span><br><span class="line"><span class="javascript">			registForm.onsubmit = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">				<span class="comment">//对表单中的数据进行验证，如果是非法的数据，就不让提交，否则就允许提交</span></span></span><br><span class="line"><span class="javascript">				<span class="keyword">if</span> (uname.value.length &lt; <span class="number">6</span>) &#123;</span></span><br><span class="line"><span class="javascript">					alert(<span class="string">&#x27;字符长度至少是6个，才能提交&#x27;</span>)</span></span><br><span class="line"><span class="javascript">					<span class="comment">//阻止表单提交</span></span></span><br><span class="line"><span class="javascript">					<span class="keyword">return</span> <span class="literal">false</span></span></span><br><span class="line"><span class="javascript">				&#125;</span></span><br><span class="line"><span class="javascript">				<span class="comment">//允许表单提交</span></span></span><br><span class="line"><span class="javascript">				<span class="keyword">return</span> <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">			&#125;</span></span><br><span class="line"><span class="javascript">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -263,16 +232,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JQuery学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/07/02/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -292,537 +329,14 @@
 
 
 
-
   
-    <article id="post-前端学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/02/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">前端学习</a>
-    </h1>
   
 
-        
-        <a href="/2021/07/02/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-07-02T12:40:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前端课件资源"><a href="#前端课件资源" class="headerlink" title="前端课件资源"></a>前端课件资源</h2>
-        
-          <a class="article-more-a" href="/2021/07/02/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/02/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-mysql相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/29/mysql%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">mysql相关操作</a>
-    </h1>
   
 
-        
-        <a href="/2021/06/29/mysql%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2021-06-29T03:21:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h6>
-        
-          <a class="article-more-a" href="/2021/06/29/mysql%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/29/mysql%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JDBC工具类的封装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/29/JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/">JDBC工具类的封装</a>
-    </h1>
   
 
-        
-        <a href="/2021/06/29/JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2021-06-29T02:18:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="jdbc的封装"><a href="#jdbc的封装" class="headerlink" title="jdbc的封装"></a>jdbc的封装</h2>
-        
-          <a class="article-more-a" href="/2021/06/29/JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/29/JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-概念模型、逻辑模型、物理模型的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/10/%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B%E3%80%81%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E3%80%81%E7%89%A9%E7%90%86%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/">概念模型、逻辑模型、物理模型的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/10/%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B%E3%80%81%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E3%80%81%E7%89%A9%E7%90%86%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2021-06-09T16:19:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="概念模型、逻辑模型、物理模型的区别"><a href="#概念模型、逻辑模型、物理模型的区别" class="headerlink" title="概念模型、逻辑模型、物理模型的区别"></a>概念模型、逻辑模型、物理模型的区别</h1><p>一般在建立数据库模型时，会涉及到几种模型种类：概念模型、逻辑模型、物理模型。</p>
-        
-          <a class="article-more-a" href="/2021/06/10/%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B%E3%80%81%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E3%80%81%E7%89%A9%E7%90%86%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/10/%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B%E3%80%81%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E3%80%81%E7%89%A9%E7%90%86%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java反射" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/01/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/01/Java%E5%8F%8D%E5%B0%84/" class="archive-article-date">
-  	<time datetime="2021-06-01T08:46:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3>
-        
-          <a class="article-more-a" href="/2021/06/01/Java%E5%8F%8D%E5%B0%84/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/01/Java%E5%8F%8D%E5%B0%84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-javeWeb项目中css或js失效的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/12/javeWeb%E9%A1%B9%E7%9B%AE%E4%B8%ADcss%E6%88%96js%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/">javeWeb项目中css或js失效的问题</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/12/javeWeb%E9%A1%B9%E7%9B%AE%E4%B8%ADcss%E6%88%96js%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-05-12T10:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="javaWeb项目，修改css或者js文件后前台显示没效果"><a href="#javaWeb项目，修改css或者js文件后前台显示没效果" class="headerlink" title="javaWeb项目，修改css或者js文件后前台显示没效果"></a>javaWeb项目，修改css或者js文件后前台显示没效果</h1>
-        
-          <a class="article-more-a" href="/2021/05/12/javeWeb%E9%A1%B9%E7%9B%AE%E4%B8%ADcss%E6%88%96js%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/12/javeWeb%E9%A1%B9%E7%9B%AE%E4%B8%ADcss%E6%88%96js%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2021-05-12T10:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Java怎么调用存储过程：</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lihaoyang/p/8675351.html">java调用存储过程、存储函数 - 我俩绝配 - 博客园 (cnblogs.com)</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/12/hello-world/" class="archive-article-date">
-  	<time datetime="2021-05-12T10:10:35.797Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/12/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -845,8 +359,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
