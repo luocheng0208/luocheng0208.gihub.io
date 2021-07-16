@@ -6,32 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>JQuery学习 | Hexo</title>
+  <title>EL表达式和JSTL小练习 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第8章 JQueryjQuery插件库：jQuery插件库-收集最全最新最好的jQuery插件 (jq22.com)">
+  <meta name="description" content="EL表达式相关练习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JQuery学习">
-<meta property="og:url" content="http://example.com/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="EL表达式和JSTL小练习">
+<meta property="og:url" content="http://example.com/2021/07/16/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL%E5%B0%8F%E7%BB%83%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第8章 JQueryjQuery插件库：jQuery插件库-收集最全最新最好的jQuery插件 (jq22.com)">
+<meta property="og:description" content="EL表达式相关练习">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547401358">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402129">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402741">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547403384">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404000">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404741">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405242">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405936">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547406546">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547407221">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547408470">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547409103">
-<meta property="article:published_time" content="2021-07-12T02:47:50.000Z">
-<meta property="article:modified_time" content="2021-07-12T02:49:58.772Z">
+<meta property="article:published_time" content="2021-07-16T12:11:39.000Z">
+<meta property="article:modified_time" content="2021-07-16T13:32:25.270Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547401358">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -179,222 +166,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JQuery学习" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-EL表达式和JSTL小练习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JQuery学习
+      EL表达式和JSTL小练习
     </h1>
   
 
         
-        <a href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-07-12T02:47:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-12</time>
+        <a href="/2021/07/16/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL%E5%B0%8F%E7%BB%83%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2021-07-16T12:11:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第8章-JQuery"><a href="#第8章-JQuery" class="headerlink" title="第8章 JQuery"></a>第8章 JQuery</h2><p>jQuery插件库：<a target="_blank" rel="noopener" href="https://www.jq22.com/">jQuery插件库-收集最全最新最好的jQuery插件 (jq22.com)</a></p>
-<span id="more"></span>
+        <h1 id="EL表达式相关练习"><a href="#EL表达式相关练习" class="headerlink" title="EL表达式相关练习"></a>EL表达式相关练习</h1><span id="more"></span>
 
-<h2 id="1-jQuery简介"><a href="#1-jQuery简介" class="headerlink" title="1 jQuery简介"></a>1 jQuery简介</h2><h3 id="1-1-jQuery库类型说明"><a href="#1-1-jQuery库类型说明" class="headerlink" title="1.1. jQuery库类型说明"></a>1.1. jQuery库类型说明</h3><p>jQuery是对原生的js进行了封装的代码库，它的理念： write Less  do more</p>
-<p>目前jQuery库分为三个大版本：</p>
-<p>jquery-1.x版本，兼容IE678,使用最为广泛的，官方只做BUG维护，功能不再新增。一般项目来说，使用1.x版本就可以了，例如：jquery-1.11.3。</p>
-<p>jquery-2.x版本，不兼容ie678，很少有人使用，官方只做BUG维护，功能不再新增。如果不考虑兼容低版本的浏览器可以使用2.x，例如：jquery-2.1.4。</p>
-<p>jquery-3.x版本，不兼容ie678，只支持最新的浏览器。除非特殊要求，一般不会使用3.x版本的，很多老的jQuery插件不支持这个版本，目前该版本是官方主要更新维护的版本，例如：jquery-3.2.1。</p>
-<h3 id="1-2-jQuery-js和jQuery-min-js的区别"><a href="#1-2-jQuery-js和jQuery-min-js的区别" class="headerlink" title="1.2. jQuery.js和jQuery.min.js的区别"></a>1.2. jQuery.js和jQuery.min.js的区别</h3><p>jquery.js是完整的未压缩的jQuery库，文件比较大，一般用于阅读学习源码或修改源码，不用于线上项目。</p>
-<p>jquery.min.js是由完整版的jQuery库经过压缩得来，压缩后功能与未压缩的完全一样，只是将其中的空白字符、注释、空行等与逻辑无关的内容删除，并进行一些优化。这个版本一般用于网站引用使用（项目上线的时候使用），减小文件体积，降低网站流量，提升访问速度等。</p>
-<p> 我们要使用jQuery开发，就要在页面上引入jQuery库，有两种方式引入jQuery库：</p>
-<p> 1）把jQuery库下载到本地，放到项目中，用相对路径引入</p>
-<p> 2）使用CDN加速服务，从外网引入jQuery库。<strong>例如：</strong><a target="_blank" rel="noopener" href="https://libs.baidu.com/jquery/1.11.3/jquery.min.js">https://libs.baidu.com/jquery/1.11.3/jquery.min.js</a></p>
-<h2 id="2-第1个jQuery程序"><a href="#2-第1个jQuery程序" class="headerlink" title="2 第1个jQuery程序"></a>2 第1个jQuery程序</h2><p>   在开始编写第一个jQuery程序之前，首先应该明确一点。在jQuery库中，$就是jQuery的一个简写的形式，例如$(“#car”)和jQuery(“#car”)是等价的，$.ajax和jQuery.ajax是等价的。如果没有特别说明，程序中的$符号都是jQuery的一个简写形式。</p>
-<p>   jQuery入口函数完整写法：</p>
-<p>   $(document).ready(<strong>function</strong> () {</p>
-<p>​    }）</p>
-<p>   <strong>简写</strong>：</p>
-<p>​    $(function () { }）</p>
-<p>  入门程序主要代码：</p>
-<pre><code>&lt;script src=&quot;https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;     &lt;script&gt;         $(document).ready(function () &#123;             console.log(&#39;jquery入口函数&#39;);         &#125;)     &lt;/script&gt;
-</code></pre>
-<p>   前面还学习过js入口函数 </p>
-<p>   window.<strong>onload</strong>=<strong>function</strong>(){</p>
-<p>​    }</p>
-<p>原生js入口函数和jQuery入口函数的对比如下：</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547401358"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547401358" alt="img"></a></p>
-<h2 id="3-jQuery选择器"><a href="#3-jQuery选择器" class="headerlink" title="3 jQuery选择器"></a>3 jQuery选择器</h2><p> jQuery选择器以CSS选择器为基础，语法：$(CSS选择器)</p>
-<h3 id="3-1-基本选择器"><a href="#3-1-基本选择器" class="headerlink" title="3.1 基本选择器"></a>3.1 基本选择器</h3><p>  基本选择器是jQuery中最常用的选择器，也是最简单的选择器，它通过元素的id、class和标签名来查找DOM元素，在网页中id名称只能用一次，class允许重复使用。</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402129"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402129" alt="img"></a></p>
-<h3 id="3-2-关系选择器"><a href="#3-2-关系选择器" class="headerlink" title="3.2 关系选择器"></a>3.2 关系选择器</h3><p>  如果想通过DOM元素之间的层次关系来获取特定的元素，那么关系选择器将会是一个非常好的选择。</p>
-<p>关系选择器的介绍如下：</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402741"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402741" alt="img"></a></p>
-<h3 id="3-3-过滤选择器"><a href="#3-3-过滤选择器" class="headerlink" title="3.3 过滤选择器"></a>3.3 过滤选择器</h3><p>  过滤选择器主要是通过特定的过滤规则来筛选出所需的DOM元素，过滤规则与CSS中的伪类选择器语法相同，即选择器都以一个冒号(:)开头。</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547403384"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547403384" alt="img"></a></p>
-<h3 id="3-4-属性选择器"><a href="#3-4-属性选择器" class="headerlink" title="3.4 属性选择器"></a>3.4 属性选择器</h3><p>  属性选择器是通过元素的属性来获取相应的元素</p>
-<p><strong>$([attr])</strong> :选择网页上具有attr属性的所有元素，不用管attr属性的值</p>
-<p><strong>$(E[attr])</strong> :选择具有attr属性的所有E元素,不用管attr属性的值</p>
-<p><strong>$([attr=value])</strong> :选择具有attr属性且属性值是value的所有元素</p>
-<p><strong>$(E[attr=value])</strong> :选择具有attr属性且属性值是value的所有E元素</p>
-<p><strong>$(E[attr!=value])</strong> :选择具有attr属性且属性值不是value的所有E元素</p>
-<h3 id="3-5-表单对象选择器"><a href="#3-5-表单对象选择器" class="headerlink" title="3.5 表单对象选择器"></a>3.5 表单对象选择器</h3><p> 为了使用户更加灵活的操作表单，jQuery中专门加入了跟表单相关的选择器，利用这个选择器，能极其方便的获取到表单的某个或某类型的元素。</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404000"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404000" alt="img"></a></p>
-<h2 id="4-jQuery事件"><a href="#4-jQuery事件" class="headerlink" title="4 jQuery事件"></a>4 jQuery事件</h2><p>事件三要素：事件源、事件、事件驱动程序</p>
-<p>事件源，也就是需要操作的对象，例如：var box = $(“#box”);</p>
-<p>事件，例如：onclick、onmouseenter等，例如：box.click(function () { 程序 });</p>
-<p>事件驱动程序，就是接下来我们将要学习的关于DOM的操作，例如： $(this).css(“color”, “red”);</p>
-<p>给jQuery对象注册事件的语法：</p>
-<p>$(css选择器).<strong>xxx事件名</strong>(function(){</p>
-<p>   //事件处理程序</p>
-<p>})</p>
-<p>注意：与原生js相比，jQuery中的事件名，不需要on开头，即click, change, blur,focus</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404741"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404741" alt="img"></a></p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405242"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405242" alt="img"></a></p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405936"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405936" alt="img"></a></p>
-<h3 id="jQuery新增事件"><a href="#jQuery新增事件" class="headerlink" title="jQuery新增事件"></a>jQuery新增事件</h3><p>  <strong>hover事件</strong></p>
-<p> 语法：<strong>hover</strong>([fnOver,] fnOut)</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547406546"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547406546" alt="img"></a></p>
-<p>一个模仿悬停事件（鼠标移动到一个对象上面及移出这个对象）的方法。</p>
-<p>当鼠标移动到一个匹配的元素上面时(mouseenter)，会触发指定的第一个函数。当鼠标移出这个元素时(mouseleave)，会触发指定的第二个函数。</p>
-<h2 id="5-jQuery样式操作"><a href="#5-jQuery样式操作" class="headerlink" title="5 jQuery样式操作"></a>5 jQuery样式操作</h2><p>单个样式设置： 元素节点.<strong>css</strong>(样式属性名, 值)</p>
-<p>多个样式设置：</p>
-<p>元素节点.<strong>css</strong>({</p>
-<p>  样式属性名1:值1,</p>
-<p>  样式属性名2:值2…</p>
-<p> })</p>
-<p>获取CSS样式: 元素节点.css(样式属性名)</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547407221"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547407221" alt="img"></a></p>
-<h2 id="6-节点操作"><a href="#6-节点操作" class="headerlink" title="6 节点操作"></a>6 节点操作</h2><h3 id="6-1-内容节点操作"><a href="#6-1-内容节点操作" class="headerlink" title="6.1 内容节点操作"></a>6.1 内容节点操作</h3><p>html(): 获取或设置元素内部的内容(解析标签和CSS样式)</p>
-<p>text(): 获取或设置元素内部的内容(不解析标签和样式)</p>
-<p>val(): 获取或设置元素的value</p>
-<h3 id="6-2-属性节点操作"><a href="#6-2-属性节点操作" class="headerlink" title="6.2 属性节点操作"></a>6.2 属性节点操作</h3><p>设置属性：<strong>attr</strong>(属性名，属性值)</p>
-<p>获取属性：<strong>attr</strong>(属性名)</p>
-<p>设置多个属性：<strong>attr</strong>( {</p>
-<p>属性名:值1,</p>
-<p>属性名2:值2</p>
-<p>})</p>
-<p><strong>removeAttr</strong>(属性名)：删除指定的属性</p>
-<p><strong>prop</strong>():操作表单元素的checked,disabled,selected属性，不要用attr()操作这3个属性</p>
-<p><strong>class属性操作的三个方法：</strong></p>
-<p><strong>addClass</strong>():给元素添加1个或多个类(class)</p>
-<p><strong>removeClass</strong>()：从元素上移除一个或多个类</p>
-<p><strong>toggleClass</strong>():切换被选元素的类</p>
-<h3 id="6-3-元素节点操作"><a href="#6-3-元素节点操作" class="headerlink" title="6.3 元素节点操作"></a>6.3 元素节点操作</h3><h4 id="1-创建节点"><a href="#1-创建节点" class="headerlink" title="1).创建节点"></a>1).创建节点</h4><p>   $(html) 方法会根据传入的HTML标记字符串，创建一个DOM对象，并将这个DOM对象包装成一个jQuery对象后返回</p>
-<h4 id="2-插入节点"><a href="#2-插入节点" class="headerlink" title="2).插入节点"></a>2).插入节点</h4><table>
-<thead>
-<tr>
-<th><strong>方法</strong></th>
-<th><strong>描述</strong></th>
-<th><strong>示例</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>append()</td>
-<td>向指定的元素内部(末尾)插入新节点。</td>
-<td>$(existsNode).<strong>append</strong>(newNode);</td>
-</tr>
-<tr>
-<td>appendTo()</td>
-<td>把新节点追加到指定的元素内部(末尾）</td>
-<td>$(newNode).appendTo(existsNode);</td>
-</tr>
-<tr>
-<td>prepend()</td>
-<td>向被选元素内部(开头)插入新节点</td>
-<td>$(existsNode).<strong>prepend</strong>(newNode);</td>
-</tr>
-<tr>
-<td>after()</td>
-<td>在被选元素外部(后面)插入新节点</td>
-<td>$(existsNode).<strong>after</strong>(newNode);</td>
-</tr>
-<tr>
-<td>before()</td>
-<td>在被选元素外部(前面)插入新节点</td>
-<td>$(existsNode).<strong>before</strong>(newNode);</td>
-</tr>
-</tbody></table>
-<h4 id="3-删除节点"><a href="#3-删除节点" class="headerlink" title="3).删除节点"></a>3).删除节点</h4><p><strong>remove</strong>()： 从DOM中删除所有匹配的元素，传入的参数用于根据jQuery表达式来删除元素。</p>
-<p>例如删除无序列表中的第3个li素节点，代码为：$(“li:eq(2)”).<strong>remove</strong>();</p>
-<p><strong>html</strong>(‘’)：清空指定节点内部所有子节点</p>
-<h4 id="4-元素节点的查找"><a href="#4-元素节点的查找" class="headerlink" title="4).元素节点的查找"></a>4).元素节点的查找</h4><table>
-<thead>
-<tr>
-<th><strong>方法名</strong></th>
-<th><strong>描述</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>parent()</td>
-<td>返回被选元素的直接父元素</td>
-</tr>
-<tr>
-<td>parents()</td>
-<td>返回被选元素的所有祖先元素(父辈)</td>
-</tr>
-<tr>
-<td>children()</td>
-<td>返回被选元素的所有直接子元素</td>
-</tr>
-<tr>
-<td>find()</td>
-<td>返回被选元素的所有后代元素(后辈)</td>
-</tr>
-<tr>
-<td>siblings()</td>
-<td>返回被选元素的所有同辈元素</td>
-</tr>
-<tr>
-<td>next()</td>
-<td>返回被选元素后面紧邻的同辈元素(1个)</td>
-</tr>
-<tr>
-<td>nextAll()</td>
-<td>返回被选元素之后的所有同辈元素</td>
-</tr>
-<tr>
-<td>prev()</td>
-<td>返回被选元素前面紧邻的同辈元素(1个)</td>
-</tr>
-<tr>
-<td>prevAll()</td>
-<td>返回被选元素之前的所有同辈元素</td>
-</tr>
-<tr>
-<td>first()</td>
-<td>返回被选元素中的第1个元素</td>
-</tr>
-<tr>
-<td>last()</td>
-<td>返回被选元素中的最后一个元素</td>
-</tr>
-<tr>
-<td>eq()</td>
-<td>返回被选元素中带有指定索引号的元素（索引从 0 开始）</td>
-</tr>
-<tr>
-<td>filter()</td>
-<td>返回匹配指定选择器的所有元素</td>
-</tr>
-<tr>
-<td>not()</td>
-<td>返回不匹配指定选择器的所有元素</td>
-</tr>
-</tbody></table>
-<h4 id="5-each-方法遍历"><a href="#5-each-方法遍历" class="headerlink" title="5).each()方法遍历"></a>5).each()方法遍历</h4><p><strong>语法：</strong></p>
-<p> $.each(对象, function(index, value){</p>
-<p> }); </p>
-<p> 其中的对象包含3种，分别是数组、JSON对象和jQuery对象</p>
-<p>第1种：遍历数组时，回调函数上的参数index是索引，value是元素值</p>
-<p>第2种：遍历json对象时，index是对象的属性名，value是属性值</p>
-<p>第3种：遍历jQuery对象时，index是DOM对象在整个元素数组中的索引,value是当前的DOM对象</p>
-<p>遍历JSON对象示例</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547408470"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547408470" alt="img"></a></p>
-<p>遍历jQuery对象示例</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547409103"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547409103" alt="img"></a></p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page <span class="keyword">import</span>=<span class="string">&quot;com.luo.entity.Student&quot;</span> %&gt;</span><br><span class="line">&lt;%@ page <span class="keyword">import</span>=<span class="string">&quot;java.util.HashMap&quot;</span> %&gt;</span><br><span class="line">&lt;%@ page <span class="keyword">import</span>=<span class="string">&quot;java.util.Map&quot;</span> %&gt;&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: HP</span><br><span class="line">  Date: <span class="number">2021</span>/<span class="number">7</span>/<span class="number">16</span></span><br><span class="line">  Time: <span class="number">11</span>:<span class="number">20</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">&quot;text/html;charset=UTF-8&quot;</span> language=<span class="string">&quot;java&quot;</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;$Title$&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;%</span><br><span class="line">      pageContext.setAttribute(<span class="string">&quot;city&quot;</span>,<span class="string">&quot;宜昌&quot;</span>);</span><br><span class="line">      <span class="comment">//请求中存入对象</span></span><br><span class="line">      Student student = <span class="keyword">new</span> Student(<span class="string">&quot;张三&quot;</span>,<span class="string">&quot;男&quot;</span>,<span class="number">18</span>);</span><br><span class="line">      request.setAttribute(<span class="string">&quot;stu&quot;</span>,student);</span><br><span class="line">      <span class="comment">//请求中存入数组</span></span><br><span class="line">      String[] phone=&#123;<span class="string">&quot;VIVO&quot;</span>,<span class="string">&quot;OPPO&quot;</span>,<span class="string">&quot;小米&quot;</span>,<span class="string">&quot;华为&quot;</span>&#125;;</span><br><span class="line">      request.setAttribute(<span class="string">&quot;phone&quot;</span>,phone);</span><br><span class="line">      <span class="comment">//请求中存入集合</span></span><br><span class="line">      Map&lt;String,String&gt; map=<span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">      map.put(<span class="string">&quot;cat&quot;</span>,<span class="string">&quot;猫&quot;</span>);</span><br><span class="line">      map.put(<span class="string">&quot;dog&quot;</span>,<span class="string">&quot;狗&quot;</span>);</span><br><span class="line">      map.put(<span class="string">&quot;bird&quot;</span>,<span class="string">&quot;鸟&quot;</span>);</span><br><span class="line">      map.put(<span class="string">&quot;123&quot;</span>,<span class="string">&quot;未知&quot;</span>);</span><br><span class="line">      request.setAttribute(<span class="string">&quot;animal&quot;</span>,map);</span><br><span class="line">    %&gt;</span><br><span class="line">&lt;%--  el表达式获取数据--%&gt;</span><br><span class="line">    城市：$&#123;pageScope.city&#125;&lt;br /&gt;</span><br><span class="line">    姓名：$&#123;requestScope.stu.sname&#125;&lt;br /&gt;</span><br><span class="line">    性别：$&#123;requestScope.stu.sex&#125;&lt;br /&gt;</span><br><span class="line">    年龄：$&#123;requestScope.stu.age&#125;&lt;br /&gt;</span><br><span class="line">&lt;%--   el表达式获取数组--%&gt;</span><br><span class="line">    手机品牌：$&#123;phone[<span class="number">0</span>]&#125;--$&#123;phone[<span class="number">1</span>]&#125;--$&#123;phone[<span class="number">2</span>]&#125;--$&#123;phone[<span class="number">3</span>]&#125;&lt;br /&gt;</span><br><span class="line">&lt;%--   el表达式获取map集合--%&gt;</span><br><span class="line">    动物：$&#123;animal.cat&#125;--$&#123;animal.dog&#125;--$&#123;animal[<span class="string">&#x27;123&#x27;</span>]&#125;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">&lt;%--    el执行运算--%&gt;</span><br><span class="line">    <span class="number">1</span>&gt;=<span class="number">2</span>=$&#123;<span class="number">1</span> le <span class="number">2</span>&#125;&lt;br /&gt;</span><br><span class="line">    <span class="number">5</span>&lt;=<span class="number">6</span>=$&#123;<span class="number">5</span> le <span class="number">6</span>&#125;&lt;br /&gt;</span><br><span class="line">    <span class="number">3</span>=<span class="number">3</span>=$&#123;<span class="number">3</span> eq <span class="number">3</span>&#125;&lt;br /&gt;</span><br><span class="line">    <span class="number">5</span>!=<span class="number">8</span>=$&#123;<span class="number">5</span> ne <span class="number">8</span>&#125;&lt;br /&gt;</span><br><span class="line">    <span class="number">1</span>+<span class="number">1</span>=$&#123;<span class="number">1</span>+<span class="number">1</span>&#125;&lt;br /&gt;</span><br><span class="line">    <span class="number">3</span>*<span class="number">6</span>=$&#123;<span class="number">3</span> * <span class="number">6</span>&#125;&lt;br /&gt;</span><br><span class="line">    <span class="number">6</span>/<span class="number">3</span>=$&#123;<span class="number">6</span> div <span class="number">3</span>&#125;&lt;br /&gt;</span><br><span class="line">    <span class="number">9</span>%<span class="number">2</span>=$&#123;<span class="number">9</span> mod <span class="number">2</span>&#125;&lt;br /&gt;</span><br><span class="line">    $&#123;<span class="number">1</span>==<span class="number">1</span> &amp;&amp; <span class="number">2</span>&gt;<span class="number">3</span>&#125; = $&#123;<span class="number">1</span>==<span class="number">1</span> and <span class="number">2</span>&gt;<span class="number">3</span>&#125;&lt;br /&gt;</span><br><span class="line">    $&#123;<span class="number">1</span>==<span class="number">1</span> || <span class="number">2</span>&gt;<span class="number">3</span>&#125; = $&#123;<span class="number">1</span>==<span class="number">1</span> or <span class="number">2</span>&gt;<span class="number">3</span>&#125;&lt;br /&gt;</span><br><span class="line">    $&#123;!<span class="keyword">true</span>&#125; = $&#123;not <span class="keyword">true</span>&#125;&lt;br /&gt;</span><br><span class="line">    &lt;hr /&gt;</span><br><span class="line">&lt;%--  el中的empty运算符--%&gt;</span><br><span class="line">  编号是否为空：$&#123;empty requestScope.stu.id&#125;</span><br><span class="line">    &lt;hr /&gt;</span><br><span class="line">&lt;%--  el中的三元运算--%&gt;</span><br><span class="line">  <span class="number">5</span>是否大于<span class="number">8</span>：$&#123;<span class="number">5</span>&gt;<span class="number">8</span>?<span class="string">&quot;大于&quot;</span>:<span class="string">&quot;小于&quot;</span>&#125;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="JSTL表达式相关练习"><a href="#JSTL表达式相关练习" class="headerlink" title="JSTL表达式相关练习"></a>JSTL表达式相关练习</h1><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page <span class="keyword">import</span>=<span class="string">&quot;java.util.*&quot;</span> %&gt;&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: HP</span><br><span class="line">  Date: <span class="number">2021</span>/<span class="number">7</span>/<span class="number">16</span></span><br><span class="line">  Time: <span class="number">19</span>:<span class="number">04</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">&quot;text/html;charset=UTF-8&quot;</span> language=<span class="string">&quot;java&quot;</span> %&gt;</span><br><span class="line">&lt;%--引入jstl标签库--%&gt;</span><br><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;c&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span> %&gt;&lt;%--核心标签库--%&gt;</span><br><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;fn&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/functions&quot;</span> %&gt;&lt;%--函数标签库--%&gt;</span><br><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;fmt&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/fmt&quot;</span> %&gt;&lt;%--格式化标签库--%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;%--jstl的set标签 <span class="keyword">var</span>为属性名 value为属性值 scope为作用域默认为page;只能用来设置一些简单属性--%&gt;</span><br><span class="line">    &lt;c:set <span class="keyword">var</span>=<span class="string">&quot;name&quot;</span> value=<span class="string">&quot;罗成&quot;</span> scope=<span class="string">&quot;request&quot;</span>&gt;&lt;/c:set&gt;</span><br><span class="line">    请求中的name值：$&#123;requestScope.name&#125;&lt;br /&gt;</span><br><span class="line">&lt;%--    &lt;c:out value=<span class="string">&quot;&quot;</span>&gt;&lt;/c:out&gt;等价于java中的out.print或out.write --%&gt;</span><br><span class="line">    &lt;c:out value=<span class="string">&quot;admin&quot;</span>&gt;&lt;/c:out&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;h2&gt;流程控制标签&lt;/h2&gt;</span><br><span class="line">    &lt;h3&gt;<span class="keyword">if</span>&lt;/h3&gt;</span><br><span class="line">    &lt;%--test中为条件表达式--%&gt;</span><br><span class="line">    &lt;c:set <span class="keyword">var</span>=<span class="string">&quot;age&quot;</span> value=<span class="string">&quot;25&quot;</span> scope=<span class="string">&quot;request&quot;</span>&gt;&lt;/c:set&gt;&lt;%--向请求中添加一个年龄--%&gt;</span><br><span class="line">    &lt;c:<span class="keyword">if</span> test=<span class="string">&quot;$&#123;age ge 18&#125;&quot;</span>&gt;</span><br><span class="line">        已成年</span><br><span class="line">    &lt;/c:<span class="keyword">if</span>&gt;</span><br><span class="line">    &lt;h3&gt;<span class="keyword">if</span>..<span class="keyword">else</span>对应jstl标签库中的choose,when,otherwise&lt;/h3&gt;</span><br><span class="line">    &lt;c:choose&gt;</span><br><span class="line">        &lt;c:when test=<span class="string">&quot;$&#123;age&gt;60&#125;&quot;</span>&gt;</span><br><span class="line">            老年</span><br><span class="line">        &lt;/c:when&gt;</span><br><span class="line">        &lt;c:when test=<span class="string">&quot;$&#123;age&gt;30&#125;&quot;</span>&gt;</span><br><span class="line">            壮年</span><br><span class="line">        &lt;/c:when&gt;</span><br><span class="line">        &lt;c:when test=<span class="string">&quot;$&#123;age&gt;=18&#125;&#125;&quot;</span>&gt;</span><br><span class="line">            青年</span><br><span class="line">        &lt;/c:when&gt;</span><br><span class="line">        &lt;c:otherwise&gt;</span><br><span class="line">            未成年</span><br><span class="line">        &lt;/c:otherwise&gt;</span><br><span class="line">    &lt;/c:choose&gt;</span><br><span class="line">    &lt;hr /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;h2&gt;jstl循环标签&lt;/h2&gt;</span><br><span class="line">    &lt;%</span><br><span class="line">        String[] strings=&#123;<span class="string">&quot;柴&quot;</span>,<span class="string">&quot;米&quot;</span>,<span class="string">&quot;油&quot;</span>,<span class="string">&quot;盐&quot;</span>&#125;;</span><br><span class="line">        List&lt;String&gt; list=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">&quot;猫&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;狗&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;鸟&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;马&quot;</span>);</span><br><span class="line">        Map&lt;Integer,String&gt; map=<span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="number">1</span>,<span class="string">&quot;小米&quot;</span>);</span><br><span class="line">        map.put(<span class="number">2</span>,<span class="string">&quot;华为&quot;</span>);</span><br><span class="line">        map.put(<span class="number">3</span>,<span class="string">&quot;VIVO&quot;</span>);</span><br><span class="line">        map.put(<span class="number">4</span>,<span class="string">&quot;OPPO&quot;</span>);</span><br><span class="line">        request.setAttribute(<span class="string">&quot;strings&quot;</span>,strings);</span><br><span class="line">        request.setAttribute(<span class="string">&quot;list&quot;</span>,list);</span><br><span class="line">        request.setAttribute(<span class="string">&quot;map&quot;</span>,map);</span><br><span class="line">    %&gt;</span><br><span class="line">    &lt;h3&gt;遍历数组&lt;/h3&gt;</span><br><span class="line">    &lt;%--<span class="keyword">var</span>变量名--&gt;代表临时遍历存储在page中的值,可以用el表达式获取，item 代表要遍历的数组或集合--%&gt;</span><br><span class="line">    &lt;c:forEach <span class="keyword">var</span>=<span class="string">&quot;str&quot;</span> items=<span class="string">&quot;$&#123;strings&#125;&quot;</span>&gt;</span><br><span class="line">        $&#123;str&#125;***</span><br><span class="line">    &lt;/c:forEach&gt;</span><br><span class="line">    &lt;h3&gt;遍历list集合&lt;/h3&gt;</span><br><span class="line">    &lt;c:forEach <span class="keyword">var</span>=<span class="string">&quot;li&quot;</span> items=<span class="string">&quot;$&#123;list&#125;&quot;</span>&gt;</span><br><span class="line">        $&#123;li&#125;***</span><br><span class="line">    &lt;/c:forEach&gt;</span><br><span class="line">    &lt;h3&gt;遍历map集合,每次遍历得到是一个entry键值对对象&lt;/h3&gt;</span><br><span class="line">    &lt;c:forEach <span class="keyword">var</span>=<span class="string">&quot;entry&quot;</span> items=<span class="string">&quot;$&#123;map&#125;&quot;</span>&gt;</span><br><span class="line">        $&#123;entry.key&#125;:$&#123;entry.value&#125;&lt;br /&gt;</span><br><span class="line">    &lt;/c:forEach&gt;</span><br><span class="line">    &lt;h3&gt;遍历连续的数字&lt;/h3&gt;</span><br><span class="line">    &lt;%--</span><br><span class="line">        等价于</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">        &#125;</span><br><span class="line">    --%&gt;</span><br><span class="line">    &lt;c:forEach <span class="keyword">var</span>=<span class="string">&quot;num&quot;</span> begin=<span class="string">&quot;1&quot;</span> end=<span class="string">&quot;5&quot;</span>&gt;</span><br><span class="line">        $&#123;num&#125;</span><br><span class="line">    &lt;/c:forEach&gt;</span><br><span class="line">    &lt;hr /&gt;</span><br><span class="line">    &lt;h2&gt;函数标签库&lt;/h2&gt;</span><br><span class="line">    luocheng转换为大写$&#123;fn:toUpperCase(<span class="string">&quot;luocheng&quot;</span>)&#125;&lt;br /&gt;</span><br><span class="line">    罗成的姓：$&#123;fn:substring(<span class="string">&quot;罗成&quot;</span>,<span class="number">0</span> ,<span class="number">1</span> )&#125;</span><br><span class="line">    &lt;hr /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;h2&gt;格式化标签库&lt;/h2&gt;</span><br><span class="line">    &lt;%</span><br><span class="line">        Date date = <span class="keyword">new</span> Date();</span><br><span class="line">        request.setAttribute(<span class="string">&quot;nowTime&quot;</span>,date);</span><br><span class="line">    %&gt;</span><br><span class="line">    未格式化之前：$&#123;nowTime&#125;&lt;br /&gt;</span><br><span class="line">    格式化之后：&lt;fmt:formatDate value=<span class="string">&quot;$&#123;nowTime&#125;&quot;</span> pattern=<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>&gt;&lt;/fmt:formatDate&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -474,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/16/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL%E5%B0%8F%E7%BB%83%E4%B9%A0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -488,18 +287,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/07/12/js(%E5%8C%85%E6%8B%ACjQuery%E6%94%B9%E5%86%99)%E4%BD%9C%E4%B8%9A/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/07/16/Tomcat/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          js(包括jQuery改写)作业
+          Tomcat
         
       </div>
     </a>
   
   
-    <a href="/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">前端JS常见问题解决</div>
+    <a href="/2021/07/16/JavaWeb%E5%B0%8F%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaWeb小学习</div>
       <i class="icon-circle-right"></i>
     </a>
   

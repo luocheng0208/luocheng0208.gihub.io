@@ -6,32 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>JQuery学习 | Hexo</title>
+  <title>EL表达式和JSTL标签库 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第8章 JQueryjQuery插件库：jQuery插件库-收集最全最新最好的jQuery插件 (jq22.com)">
+  <meta name="description" content="​     第4章：EL与JSTL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JQuery学习">
-<meta property="og:url" content="http://example.com/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="EL表达式和JSTL标签库">
+<meta property="og:url" content="http://example.com/2021/07/16/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL%E6%A0%87%E7%AD%BE%E5%BA%93/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第8章 JQueryjQuery插件库：jQuery插件库-收集最全最新最好的jQuery插件 (jq22.com)">
+<meta property="og:description" content="​     第4章：EL与JSTL">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547401358">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402129">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402741">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547403384">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404000">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404741">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405242">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405936">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547406546">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547407221">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547408470">
-<meta property="og:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547409103">
-<meta property="article:published_time" content="2021-07-12T02:47:50.000Z">
-<meta property="article:modified_time" content="2021-07-12T02:49:58.772Z">
+<meta property="og:image" content="e:/blog/source_posts/EL表达式和JSTL标签库.assets/clip_image002.jpg">
+<meta property="og:image" content="e:/blog/source_posts/EL表达式和JSTL标签库.assets/clip_image004.jpg">
+<meta property="og:image" content="e:/blog/source_posts/EL表达式和JSTL标签库.assets/clip_image006.jpg">
+<meta property="og:image" content="e:/blog/source_posts/EL表达式和JSTL标签库.assets/clip_image008.jpg">
+<meta property="article:published_time" content="2021-07-16T13:17:22.000Z">
+<meta property="article:modified_time" content="2021-07-16T13:32:14.938Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547401358">
+<meta name="twitter:image" content="e:/blog/source_posts/EL表达式和JSTL标签库.assets/clip_image002.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -179,222 +171,313 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JQuery学习" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-EL表达式和JSTL标签库" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JQuery学习
+      EL表达式和JSTL标签库
     </h1>
   
 
         
-        <a href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-07-12T02:47:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-12</time>
+        <a href="/2021/07/16/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL%E6%A0%87%E7%AD%BE%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2021-07-16T13:17:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第8章-JQuery"><a href="#第8章-JQuery" class="headerlink" title="第8章 JQuery"></a>第8章 JQuery</h2><p>jQuery插件库：<a target="_blank" rel="noopener" href="https://www.jq22.com/">jQuery插件库-收集最全最新最好的jQuery插件 (jq22.com)</a></p>
+        <p>​    </p>
+<p>第4章：EL与JSTL</p>
 <span id="more"></span>
 
-<h2 id="1-jQuery简介"><a href="#1-jQuery简介" class="headerlink" title="1 jQuery简介"></a>1 jQuery简介</h2><h3 id="1-1-jQuery库类型说明"><a href="#1-1-jQuery库类型说明" class="headerlink" title="1.1. jQuery库类型说明"></a>1.1. jQuery库类型说明</h3><p>jQuery是对原生的js进行了封装的代码库，它的理念： write Less  do more</p>
-<p>目前jQuery库分为三个大版本：</p>
-<p>jquery-1.x版本，兼容IE678,使用最为广泛的，官方只做BUG维护，功能不再新增。一般项目来说，使用1.x版本就可以了，例如：jquery-1.11.3。</p>
-<p>jquery-2.x版本，不兼容ie678，很少有人使用，官方只做BUG维护，功能不再新增。如果不考虑兼容低版本的浏览器可以使用2.x，例如：jquery-2.1.4。</p>
-<p>jquery-3.x版本，不兼容ie678，只支持最新的浏览器。除非特殊要求，一般不会使用3.x版本的，很多老的jQuery插件不支持这个版本，目前该版本是官方主要更新维护的版本，例如：jquery-3.2.1。</p>
-<h3 id="1-2-jQuery-js和jQuery-min-js的区别"><a href="#1-2-jQuery-js和jQuery-min-js的区别" class="headerlink" title="1.2. jQuery.js和jQuery.min.js的区别"></a>1.2. jQuery.js和jQuery.min.js的区别</h3><p>jquery.js是完整的未压缩的jQuery库，文件比较大，一般用于阅读学习源码或修改源码，不用于线上项目。</p>
-<p>jquery.min.js是由完整版的jQuery库经过压缩得来，压缩后功能与未压缩的完全一样，只是将其中的空白字符、注释、空行等与逻辑无关的内容删除，并进行一些优化。这个版本一般用于网站引用使用（项目上线的时候使用），减小文件体积，降低网站流量，提升访问速度等。</p>
-<p> 我们要使用jQuery开发，就要在页面上引入jQuery库，有两种方式引入jQuery库：</p>
-<p> 1）把jQuery库下载到本地，放到项目中，用相对路径引入</p>
-<p> 2）使用CDN加速服务，从外网引入jQuery库。<strong>例如：</strong><a target="_blank" rel="noopener" href="https://libs.baidu.com/jquery/1.11.3/jquery.min.js">https://libs.baidu.com/jquery/1.11.3/jquery.min.js</a></p>
-<h2 id="2-第1个jQuery程序"><a href="#2-第1个jQuery程序" class="headerlink" title="2 第1个jQuery程序"></a>2 第1个jQuery程序</h2><p>   在开始编写第一个jQuery程序之前，首先应该明确一点。在jQuery库中，$就是jQuery的一个简写的形式，例如$(“#car”)和jQuery(“#car”)是等价的，$.ajax和jQuery.ajax是等价的。如果没有特别说明，程序中的$符号都是jQuery的一个简写形式。</p>
-<p>   jQuery入口函数完整写法：</p>
-<p>   $(document).ready(<strong>function</strong> () {</p>
-<p>​    }）</p>
-<p>   <strong>简写</strong>：</p>
-<p>​    $(function () { }）</p>
-<p>  入门程序主要代码：</p>
-<pre><code>&lt;script src=&quot;https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;     &lt;script&gt;         $(document).ready(function () &#123;             console.log(&#39;jquery入口函数&#39;);         &#125;)     &lt;/script&gt;
-</code></pre>
-<p>   前面还学习过js入口函数 </p>
-<p>   window.<strong>onload</strong>=<strong>function</strong>(){</p>
-<p>​    }</p>
-<p>原生js入口函数和jQuery入口函数的对比如下：</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547401358"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547401358" alt="img"></a></p>
-<h2 id="3-jQuery选择器"><a href="#3-jQuery选择器" class="headerlink" title="3 jQuery选择器"></a>3 jQuery选择器</h2><p> jQuery选择器以CSS选择器为基础，语法：$(CSS选择器)</p>
-<h3 id="3-1-基本选择器"><a href="#3-1-基本选择器" class="headerlink" title="3.1 基本选择器"></a>3.1 基本选择器</h3><p>  基本选择器是jQuery中最常用的选择器，也是最简单的选择器，它通过元素的id、class和标签名来查找DOM元素，在网页中id名称只能用一次，class允许重复使用。</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402129"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402129" alt="img"></a></p>
-<h3 id="3-2-关系选择器"><a href="#3-2-关系选择器" class="headerlink" title="3.2 关系选择器"></a>3.2 关系选择器</h3><p>  如果想通过DOM元素之间的层次关系来获取特定的元素，那么关系选择器将会是一个非常好的选择。</p>
-<p>关系选择器的介绍如下：</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402741"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547402741" alt="img"></a></p>
-<h3 id="3-3-过滤选择器"><a href="#3-3-过滤选择器" class="headerlink" title="3.3 过滤选择器"></a>3.3 过滤选择器</h3><p>  过滤选择器主要是通过特定的过滤规则来筛选出所需的DOM元素，过滤规则与CSS中的伪类选择器语法相同，即选择器都以一个冒号(:)开头。</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547403384"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547403384" alt="img"></a></p>
-<h3 id="3-4-属性选择器"><a href="#3-4-属性选择器" class="headerlink" title="3.4 属性选择器"></a>3.4 属性选择器</h3><p>  属性选择器是通过元素的属性来获取相应的元素</p>
-<p><strong>$([attr])</strong> :选择网页上具有attr属性的所有元素，不用管attr属性的值</p>
-<p><strong>$(E[attr])</strong> :选择具有attr属性的所有E元素,不用管attr属性的值</p>
-<p><strong>$([attr=value])</strong> :选择具有attr属性且属性值是value的所有元素</p>
-<p><strong>$(E[attr=value])</strong> :选择具有attr属性且属性值是value的所有E元素</p>
-<p><strong>$(E[attr!=value])</strong> :选择具有attr属性且属性值不是value的所有E元素</p>
-<h3 id="3-5-表单对象选择器"><a href="#3-5-表单对象选择器" class="headerlink" title="3.5 表单对象选择器"></a>3.5 表单对象选择器</h3><p> 为了使用户更加灵活的操作表单，jQuery中专门加入了跟表单相关的选择器，利用这个选择器，能极其方便的获取到表单的某个或某类型的元素。</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404000"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404000" alt="img"></a></p>
-<h2 id="4-jQuery事件"><a href="#4-jQuery事件" class="headerlink" title="4 jQuery事件"></a>4 jQuery事件</h2><p>事件三要素：事件源、事件、事件驱动程序</p>
-<p>事件源，也就是需要操作的对象，例如：var box = $(“#box”);</p>
-<p>事件，例如：onclick、onmouseenter等，例如：box.click(function () { 程序 });</p>
-<p>事件驱动程序，就是接下来我们将要学习的关于DOM的操作，例如： $(this).css(“color”, “red”);</p>
-<p>给jQuery对象注册事件的语法：</p>
-<p>$(css选择器).<strong>xxx事件名</strong>(function(){</p>
-<p>   //事件处理程序</p>
-<p>})</p>
-<p>注意：与原生js相比，jQuery中的事件名，不需要on开头，即click, change, blur,focus</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404741"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547404741" alt="img"></a></p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405242"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405242" alt="img"></a></p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405936"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547405936" alt="img"></a></p>
-<h3 id="jQuery新增事件"><a href="#jQuery新增事件" class="headerlink" title="jQuery新增事件"></a>jQuery新增事件</h3><p>  <strong>hover事件</strong></p>
-<p> 语法：<strong>hover</strong>([fnOver,] fnOut)</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547406546"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547406546" alt="img"></a></p>
-<p>一个模仿悬停事件（鼠标移动到一个对象上面及移出这个对象）的方法。</p>
-<p>当鼠标移动到一个匹配的元素上面时(mouseenter)，会触发指定的第一个函数。当鼠标移出这个元素时(mouseleave)，会触发指定的第二个函数。</p>
-<h2 id="5-jQuery样式操作"><a href="#5-jQuery样式操作" class="headerlink" title="5 jQuery样式操作"></a>5 jQuery样式操作</h2><p>单个样式设置： 元素节点.<strong>css</strong>(样式属性名, 值)</p>
-<p>多个样式设置：</p>
-<p>元素节点.<strong>css</strong>({</p>
-<p>  样式属性名1:值1,</p>
-<p>  样式属性名2:值2…</p>
-<p> })</p>
-<p>获取CSS样式: 元素节点.css(样式属性名)</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547407221"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547407221" alt="img"></a></p>
-<h2 id="6-节点操作"><a href="#6-节点操作" class="headerlink" title="6 节点操作"></a>6 节点操作</h2><h3 id="6-1-内容节点操作"><a href="#6-1-内容节点操作" class="headerlink" title="6.1 内容节点操作"></a>6.1 内容节点操作</h3><p>html(): 获取或设置元素内部的内容(解析标签和CSS样式)</p>
-<p>text(): 获取或设置元素内部的内容(不解析标签和样式)</p>
-<p>val(): 获取或设置元素的value</p>
-<h3 id="6-2-属性节点操作"><a href="#6-2-属性节点操作" class="headerlink" title="6.2 属性节点操作"></a>6.2 属性节点操作</h3><p>设置属性：<strong>attr</strong>(属性名，属性值)</p>
-<p>获取属性：<strong>attr</strong>(属性名)</p>
-<p>设置多个属性：<strong>attr</strong>( {</p>
-<p>属性名:值1,</p>
-<p>属性名2:值2</p>
-<p>})</p>
-<p><strong>removeAttr</strong>(属性名)：删除指定的属性</p>
-<p><strong>prop</strong>():操作表单元素的checked,disabled,selected属性，不要用attr()操作这3个属性</p>
-<p><strong>class属性操作的三个方法：</strong></p>
-<p><strong>addClass</strong>():给元素添加1个或多个类(class)</p>
-<p><strong>removeClass</strong>()：从元素上移除一个或多个类</p>
-<p><strong>toggleClass</strong>():切换被选元素的类</p>
-<h3 id="6-3-元素节点操作"><a href="#6-3-元素节点操作" class="headerlink" title="6.3 元素节点操作"></a>6.3 元素节点操作</h3><h4 id="1-创建节点"><a href="#1-创建节点" class="headerlink" title="1).创建节点"></a>1).创建节点</h4><p>   $(html) 方法会根据传入的HTML标记字符串，创建一个DOM对象，并将这个DOM对象包装成一个jQuery对象后返回</p>
-<h4 id="2-插入节点"><a href="#2-插入节点" class="headerlink" title="2).插入节点"></a>2).插入节点</h4><table>
+<h1 id="1-EL"><a href="#1-EL" class="headerlink" title="1 EL"></a>1 EL</h1><p>EL 全名为 Expression Language(表达式语言)。EL的主要作用：</p>
+<p>1、获取数据</p>
+<p>EL 表达式主要用于替换 JSP 页面中的表达式脚本，以及从 web 域中检索 java 对象、获取数据。Web 域指的是 jsp 的四个作用域对象，按照作用域从小到大依次是：page, request, session, application</p>
+<p>2、执行运算</p>
+<p>利用 EL 表达式可以在 JSP 页面中执行一些基本的关系运算、逻辑运算和算术运算</p>
+<p>3、调用Java方法</p>
+<p>  允许在 JSP 页面中通过 EL 表达式调用 Java 类的方法。</p>
+<p>4、获取web开发常用对象</p>
+<p>EL 表达式定义了一些隐式对象，利用这些隐式对象，web 开发人员可以很轻松获得对 web 常用对象的引用，从而获得这些对象中的数据。</p>
+<h2 id="1-1-获取数据"><a href="#1-1-获取数据" class="headerlink" title="1.1 获取数据"></a>1.1 获取数据</h2><p>使用 EL 表达式获取数据的语法：${标识符} </p>
+<p>EL 表达式在执行时，会调用 pageContext.findAttribute 方法，用标识符为关键字，分别从 page、request、session、application四个作用域中查找相应的数据，找到则返回相应的数据，找不到则返回””（注意，不是 null，而是空字符串）。</p>
+<p>EL 表达式可以很轻松获取javaBean对象的属性值，或者获取数组、Collection、Map 类型集合的数据。在获取数据时，”.” 是我们最常用的，作用相当于执行javaBean 中的get方法。例如：${user.userName}意思是：从作用域对象中得到名称为user的javaBean对象，通过“.”运算符执行getUserName()方法，返回存放在对象中的用户名属性的值。</p>
+<p>需求1：获取简单的String数据</p>
+<p> 第1步：必须要把数据存到作用域对象中</p>
+<p> 第2步：使用EL的语法读出域对象中的数据${标识符}</p>
+<p>需求2：获取javaBean对象的属性数据</p>
+<p> //1：把javaBean对象存到作用域对象中</p>
+<p> //2.使用EL获取对象的属性数据 ${存对象的key.属性名}</p>
+<p> 注意：1)访问javaBean对象的属性数据，本质是在调用该属性对应的getXxx()</p>
+<p> 2)javaBean类中可以没有xxx属性，只要有getXxx()方法就可以了</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">   <span class="comment">//用page域存储数据</span></span><br><span class="line">  pageContext.setAttribute(<span class="string">&quot;username&quot;</span>,<span class="string">&quot;李四&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//保存一个javaBean对象</span></span><br><span class="line">    Person person=<span class="keyword">new</span> Person(<span class="number">1</span>,<span class="string">&quot;陆小凤&quot;</span>,<span class="string">&quot;男&quot;</span>);</span><br><span class="line">    <span class="comment">//用request域存储数据</span></span><br><span class="line">    request.setAttribute(<span class="string">&quot;p&quot;</span>,person);</span><br><span class="line">%&gt;</span><br><span class="line"></span><br><span class="line">用户名：$&#123;username&#125;&lt;hr&gt;</span><br><span class="line">用户姓名：$&#123;p.name&#125;,性别：$&#123;p.sex&#125; ,用户信息:$&#123;p.info&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>常见错误：访问javaBean对象的属性数据时，如果写错了属性名，就会报属性找不到的错误</p>
+<p><img src="E:\blog\source_posts\EL表达式和JSTL标签库.assets\clip_image002.jpg" alt="img"></p>
+<p>需求3：获取javaBean对象的关联对象的属性数据</p>
+<p> 语法：${存对象的key.关联的对象属性.属性名}</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">比如：$&#123;p.address.name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需求4：获取String数组指定位置的数据</p>
+<p>通过索引来访问指定位置的数据</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如：$&#123;phones[<span class="number">1</span>]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需求5：获取List集合指定位置的数据</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">同上面的数组，通过索引来获取。例如：$&#123;list[<span class="number">2</span>]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需求6：获取Map集合指定key的数据</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过$&#123;存map集合的key.key&#125; 例如：$&#123;citys.cq&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>如果EL中的标识符是不合法的名称，则不能用点运算符获取数据，应该用[]运算符，</p>
+<p>在[]里面把不合法的key用单引号或双引号包裹起来</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">获取Map集合中指定key的数据：$&#123;citys[<span class="string">&#x27;a.b.c&#x27;</span>]&#125;&lt;hr&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-执行运算"><a href="#1-2-执行运算" class="headerlink" title="1.2 执行运算"></a>1.2 执行运算</h2><p> EL执行运算的语法： ${运算表达式}，EL支持如下运算符：</p>
+<p> <strong>1****）关系运算符</strong> </p>
+<table>
 <thead>
 <tr>
-<th><strong>方法</strong></th>
-<th><strong>描述</strong></th>
-<th><strong>示例</strong></th>
+<th>关系运算符</th>
+<th>说 明</th>
+<th>范 例</th>
+<th>结果</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>append()</td>
-<td>向指定的元素内部(末尾)插入新节点。</td>
-<td>$(existsNode).<strong>append</strong>(newNode);</td>
+<td>== 或 eq</td>
+<td>等于</td>
+<td>${ 5 == 5 } 或 ${ 5 eq 5 }</td>
+<td>true</td>
 </tr>
 <tr>
-<td>appendTo()</td>
-<td>把新节点追加到指定的元素内部(末尾）</td>
-<td>$(newNode).appendTo(existsNode);</td>
+<td>!= 或 ne</td>
+<td>不等于</td>
+<td>${ 5 !=5 } 或 ${ 5 ne 5 }</td>
+<td>false</td>
 </tr>
 <tr>
-<td>prepend()</td>
-<td>向被选元素内部(开头)插入新节点</td>
-<td>$(existsNode).<strong>prepend</strong>(newNode);</td>
+<td>&lt; 或 lt</td>
+<td>小于</td>
+<td>${ 3 &lt; 5 } 或 ${ 3 lt 5 }</td>
+<td>true</td>
 </tr>
 <tr>
-<td>after()</td>
-<td>在被选元素外部(后面)插入新节点</td>
-<td>$(existsNode).<strong>after</strong>(newNode);</td>
+<td>&gt; 或 gt</td>
+<td>大于</td>
+<td>${ 2 &gt; 10 } 或 ${ 2 gt 10 }</td>
+<td>false</td>
 </tr>
 <tr>
-<td>before()</td>
-<td>在被选元素外部(前面)插入新节点</td>
-<td>$(existsNode).<strong>before</strong>(newNode);</td>
+<td>&lt;= 或 le</td>
+<td>小于等于</td>
+<td>${ 5 &lt;= 12 } 或 ${ 5 le 12 }</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&gt;= 或 ge</td>
+<td>大于等于</td>
+<td>${ 3 &gt;= 5 } 或 ${ 3 ge 5 }</td>
+<td>false</td>
 </tr>
 </tbody></table>
-<h4 id="3-删除节点"><a href="#3-删除节点" class="headerlink" title="3).删除节点"></a>3).删除节点</h4><p><strong>remove</strong>()： 从DOM中删除所有匹配的元素，传入的参数用于根据jQuery表达式来删除元素。</p>
-<p>例如删除无序列表中的第3个li素节点，代码为：$(“li:eq(2)”).<strong>remove</strong>();</p>
-<p><strong>html</strong>(‘’)：清空指定节点内部所有子节点</p>
-<h4 id="4-元素节点的查找"><a href="#4-元素节点的查找" class="headerlink" title="4).元素节点的查找"></a>4).元素节点的查找</h4><table>
+<p> <strong>2****）逻辑运算符</strong> </p>
+<table>
 <thead>
 <tr>
-<th><strong>方法名</strong></th>
-<th><strong>描述</strong></th>
+<th>逻辑运算符</th>
+<th>说 明</th>
+<th>范 例</th>
+<th>结果</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>parent()</td>
-<td>返回被选元素的直接父元素</td>
+<td>&amp;&amp; 或 and</td>
+<td>与运算</td>
+<td>${ 12 == 12 &amp;&amp;  12 &lt; 11 } 或 ${ 12 == 12 and 12  &lt; 11 }</td>
+<td>false</td>
 </tr>
 <tr>
-<td>parents()</td>
-<td>返回被选元素的所有祖先元素(父辈)</td>
+<td>|| 或 or</td>
+<td>或运算</td>
+<td>${ 12 == 12 || 12 &lt;  11 } 或 ${ 12 == 12 or 12 &lt;  11 }</td>
+<td>true</td>
 </tr>
 <tr>
-<td>children()</td>
-<td>返回被选元素的所有直接子元素</td>
-</tr>
-<tr>
-<td>find()</td>
-<td>返回被选元素的所有后代元素(后辈)</td>
-</tr>
-<tr>
-<td>siblings()</td>
-<td>返回被选元素的所有同辈元素</td>
-</tr>
-<tr>
-<td>next()</td>
-<td>返回被选元素后面紧邻的同辈元素(1个)</td>
-</tr>
-<tr>
-<td>nextAll()</td>
-<td>返回被选元素之后的所有同辈元素</td>
-</tr>
-<tr>
-<td>prev()</td>
-<td>返回被选元素前面紧邻的同辈元素(1个)</td>
-</tr>
-<tr>
-<td>prevAll()</td>
-<td>返回被选元素之前的所有同辈元素</td>
-</tr>
-<tr>
-<td>first()</td>
-<td>返回被选元素中的第1个元素</td>
-</tr>
-<tr>
-<td>last()</td>
-<td>返回被选元素中的最后一个元素</td>
-</tr>
-<tr>
-<td>eq()</td>
-<td>返回被选元素中带有指定索引号的元素（索引从 0 开始）</td>
-</tr>
-<tr>
-<td>filter()</td>
-<td>返回匹配指定选择器的所有元素</td>
-</tr>
-<tr>
-<td>not()</td>
-<td>返回不匹配指定选择器的所有元素</td>
+<td>! 或 not</td>
+<td>取反运算</td>
+<td>${ !true } 或 ${not true }</td>
+<td>false</td>
 </tr>
 </tbody></table>
-<h4 id="5-each-方法遍历"><a href="#5-each-方法遍历" class="headerlink" title="5).each()方法遍历"></a>5).each()方法遍历</h4><p><strong>语法：</strong></p>
-<p> $.each(对象, function(index, value){</p>
-<p> }); </p>
-<p> 其中的对象包含3种，分别是数组、JSON对象和jQuery对象</p>
-<p>第1种：遍历数组时，回调函数上的参数index是索引，value是元素值</p>
-<p>第2种：遍历json对象时，index是对象的属性名，value是属性值</p>
-<p>第3种：遍历jQuery对象时，index是DOM对象在整个元素数组中的索引,value是当前的DOM对象</p>
-<p>遍历JSON对象示例</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547408470"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547408470" alt="img"></a></p>
-<p>遍历jQuery对象示例</p>
-<p><a target="_blank" rel="noopener" href="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547409103"><img src="https://baklibcdn2.dagle.cn/t/73fc4a79-aba2-4f5f-abb3-da37ed1e8b44/u/b4874e6f-97d9-4f46-b32d-50f199121874/1618547409103" alt="img"></a></p>
+<p> <strong>3****）算术运算符</strong> </p>
+<table>
+<thead>
+<tr>
+<th>算术运算符</th>
+<th>说 明</th>
+<th>范 例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>加法</td>
+<td>${ 12 + 18 }</td>
+<td>30</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减法</td>
+<td>${ 18 - 8 }</td>
+<td>10</td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘法</td>
+<td>${ 12 * 12 }</td>
+<td>144</td>
+</tr>
+<tr>
+<td>/ 或 div</td>
+<td>除法</td>
+<td>${ 144 div 12 }</td>
+<td>12</td>
+</tr>
+<tr>
+<td>% 或 mod</td>
+<td>取模</td>
+<td>${ 144 mod 10 }</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<p><strong>4）<strong><strong>empty</strong></strong>运算符</strong></p>
+<p> <strong>语法：${empty xxx}</strong></p>
+<p>empty 运算可以判断一个表达式的值是否为空， 如果为空， 则输出 true,不为空输出 false。 </p>
+<p>以下几种情况为空：</p>
+<p> a)值为空串或null b)值为Object类型数组且长度为0</p>
+<p> c)值为集合且size为0</p>
+<p><strong>5****）三元运算</strong></p>
+<p>表达式 1？ 表达式 2： 表达式 3<br> 如果表达式1的值为真，返回表达式2的值，否则返回表达式3的值。 </p>
+<h2 id="1-3-调用Java方法"><a href="#1-3-调用Java方法" class="headerlink" title="1.3 调用Java方法"></a>1.3 调用Java方法</h2><p> EL可以调用java类中的方法，如果是getXxx()，就用xxx来调用，否则直接用方法名调用</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">集合的size:$&#123;list.size()&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4-获取web开发常用对象"><a href="#1-4-获取web开发常用对象" class="headerlink" title="1.4 获取web开发常用对象"></a>1.4 获取web开发常用对象</h2><p>EL表达式中定义了 11 个隐含对象，可以直接使用。使用这些隐含对象可以很方便地获取web开发中的一些常见对象，并读取这些对象的数据。</p>
+<p>语法：**${**隐含对象名称}</p>
+<table>
+<thead>
+<tr>
+<th><strong>序号</strong></th>
+<th><strong>隐含对象名称</strong></th>
+<th><strong>描</strong>       <strong>述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>pageContext</td>
+<td>对应于JSP页面中的pageContext对象（注意：取的是pageContext对象）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>pageScope</td>
+<td>代表page域中用于保存属性的Map对象</td>
+</tr>
+<tr>
+<td>3</td>
+<td>requestScope</td>
+<td>代表request域中用于保存属性的Map对象</td>
+</tr>
+<tr>
+<td>4</td>
+<td>sessionScope</td>
+<td>代表session域中用于保存属性的Map对象</td>
+</tr>
+<tr>
+<td>5</td>
+<td>applicationScope</td>
+<td>代表application域中用于保存属性的Map对象</td>
+</tr>
+<tr>
+<td>6</td>
+<td>param</td>
+<td>表示一个保存了所有请求参数的Map对象</td>
+</tr>
+<tr>
+<td>7</td>
+<td>paramValues</td>
+<td>表示一个保存了所有请求参数的Map对象，它对某个请求参数返回String数组</td>
+</tr>
+<tr>
+<td>8</td>
+<td>header</td>
+<td>表示一个保存了所有http请求头字段的Map对象</td>
+</tr>
+<tr>
+<td>9</td>
+<td>headerValues</td>
+<td>同上，对某个请求头返回string[]数组。</td>
+</tr>
+<tr>
+<td>10</td>
+<td>cookie</td>
+<td>表示一个保存了所有cookie的Map对象</td>
+</tr>
+<tr>
+<td>11</td>
+<td>initParam</td>
+<td>表示一个保存了所有web应用初始化参数的map对象</td>
+</tr>
+</tbody></table>
+<h1 id="2-JSTL"><a href="#2-JSTL" class="headerlink" title="2 JSTL"></a>2 JSTL</h1><p>JSTL全称是JSP Standard Tag Library，即JSP标准标签库，它是一个JSP标签的集合。</p>
+<p>EL表达式主要是为了替换 jsp页面中的表达式脚本， 而标签库则是为了替换代码脚本。 这样使得整个 jsp 页面变得更加简洁。</p>
+<p><strong>JSTL</strong> <strong>由五个不同功能的标签库组成</strong></p>
+<p><img src="E:\blog\source_posts\EL表达式和JSTL标签库.assets\clip_image004.jpg" alt="img"></p>
+<p>在 jsp 页面上使用标签库的步骤：</p>
+<p>1）导入jstl的jar包</p>
+<p> <img src="E:\blog\source_posts\EL表达式和JSTL标签库.assets\clip_image006.jpg" alt="img"></p>
+<p>2）使用taglib 指令引入标签库，例如：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;c&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-1-核心标签库"><a href="#2-1-核心标签库" class="headerlink" title="2.1 核心标签库"></a>2.1 核心标签库</h2><p>核心标签库中包含如下标签：</p>
+<p>1）表达式控制标签：out标签、set标签、remove标签</p>
+<p>2）流程控制标签：if 标签、choose 标签、when 标签、otherwise 标签。</p>
+<p>3）循环标签：forEach标签</p>
+<h3 id="2-1-1-表达式控制标签-了解"><a href="#2-1-1-表达式控制标签-了解" class="headerlink" title="2.1.1 表达式控制标签(了解)"></a>2.1.1 表达式控制标签(了解)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> set标签:设置属性的值,scope是可选的属性，代表保存属性的域对象，默认值是page</span><br><span class="line"> out标签：输出属性的值</span><br><span class="line">remove标签：删除某个属性</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-2-流程控制标签-重点"><a href="#2-1-2-流程控制标签-重点" class="headerlink" title="2.1.2 流程控制标签(重点)"></a>2.1.2 流程控制标签(重点)</h3><p> if标签：做简单的条件判断，语法：</p>
+<p><img src="E:\blog\source_posts\EL表达式和JSTL标签库.assets\clip_image008.jpg" alt="img"></p>
+<p> choose，when及otherwise标签通常是配合使用，choose要作为when和otherwise的父标签。</p>
+<p>语法：  </p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:choose&gt;</span><br><span class="line">&lt;c:when  test=”条件<span class="number">1</span>”&gt;</span><br><span class="line">   满足条件<span class="number">1</span>执行的代码</span><br><span class="line"> &lt;/c:when&gt;</span><br><span class="line">&lt;c:when  test=”条件<span class="number">2</span>”&gt;</span><br><span class="line">   满足条件<span class="number">2</span>执行的代码</span><br><span class="line"> &lt;/c:when&gt;</span><br><span class="line">....</span><br><span class="line">&lt;c:otherwise&gt;</span><br><span class="line"> 以上所有条件都不满足执行的代码</span><br><span class="line">&lt;/c:otherwise&gt;</span><br><span class="line">&lt;/c:choose&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结：以上<strong><strong>3</strong></strong>个标签配合使用，构造类似于<strong><strong>java</strong></strong>中的多重<strong><strong>if</strong></strong>判断结构，即****if..elseif..elseif..else</strong></p>
+<h3 id="2-1-3-循环标签-重点"><a href="#2-1-3-循环标签-重点" class="headerlink" title="2.1.3 循环标签(重点)"></a>2.1.3 循环标签(重点)</h3><p>forEach标签：该标签根据循环条件遍历集合（Collection）或数组中的元素，也可遍历一组连续数字。</p>
+<p> <strong>1****）遍历List集合</strong></p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> forEach标签遍历集合或数组时，有<span class="number">2</span>个必需的属性</span><br><span class="line">    <span class="number">1.</span><span class="keyword">var</span>：设置当前遍历的元素的名称，jsp引擎会以该名称作为key把数据存到page域对象中</span><br><span class="line">    <span class="number">2.</span>items:要遍历的集合或数组</span><br><span class="line">&lt;%</span><br><span class="line">    List&lt;String&gt;  strs=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    strs.add(<span class="string">&quot;武汉&quot;</span>);</span><br><span class="line">    strs.add(<span class="string">&quot;南京&quot;</span>);</span><br><span class="line">    strs.add(<span class="string">&quot;杭州&quot;</span>);</span><br><span class="line">    strs.add(<span class="string">&quot;上海&quot;</span>);</span><br><span class="line">    <span class="comment">//存到request域对象中</span></span><br><span class="line">    request.setAttribute(<span class="string">&quot;citys&quot;</span>,strs);</span><br><span class="line">%&gt;</span><br><span class="line">  &lt;c:forEach <span class="keyword">var</span>=<span class="string">&quot;city&quot;</span> items=<span class="string">&quot;$&#123;requestScope.citys&#125;&quot;</span>&gt;</span><br><span class="line">      $&#123;pageScope.city&#125;&lt;br&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2****）遍历Map集合</strong></p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:forEach <span class="keyword">var</span>=<span class="string">&quot;entry&quot;</span> items=<span class="string">&quot;$&#123;requestScope.cmap&#125;&quot;</span>&gt;</span><br><span class="line">   key: $&#123;entry.key&#125;,value:$&#123;entry.value&#125;&lt;br&gt;</span><br><span class="line">&lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>3****）遍历数组</strong></p>
+<p> <strong>forEach****标签遍历集合或数组时，有2个可选属性：</strong></p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:forEach <span class="keyword">var</span>=<span class="string">&quot;user&quot;</span> items=<span class="string">&quot;$&#123;list&#125;&quot;</span> begin=<span class="string">&quot;1&quot;</span> end=<span class="string">&quot;3&quot;</span>&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;$&#123;user.id&#125;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;$&#123;user.name&#125;&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-函数标签库-了解"><a href="#2-2-函数标签库-了解" class="headerlink" title="2.2 函数标签库(了解)"></a>2.2 函数标签库(了解)</h2><p>函数库包含了很多函数标签，用于调用字符串处理函数，从而向页面输出数据。每个字符串处理函数都对应了String类中的一个方法。</p>
+<p>语法：${fn: 函数名（参数）}</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 函数标签库处理字符串--全转换为大写： $&#123;fn:toUpperCase(str)&#125;&lt;br&gt;</span><br><span class="line">函数标签库处理字符串--截取一子字符串： $&#123;fn:substring(str, <span class="number">2</span>,<span class="number">8</span>)&#125;&lt;br&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-格式化标签库-了解"><a href="#2-3-格式化标签库-了解" class="headerlink" title="2.3 格式化标签库(了解)"></a>2.3 格式化标签库(了解)</h2><p>formatDate标签：格式化日期</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:formatDate value=<span class="string">&quot;$&#123;now&#125;&quot;</span> pattern=<span class="string">&quot;yyyy-MM-dd&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-在学生管理项目中使用EL-JSTL"><a href="#3-在学生管理项目中使用EL-JSTL" class="headerlink" title="3 在学生管理项目中使用EL+JSTL"></a>3 在学生管理项目中使用EL+JSTL</h1><p>需求:实现学生管理完整的CRUD功能，jsp页面上尽量使用EL+JSTL消除JSP页面上的表达式脚本和代码脚本</p>
+<p>以列表页面stuList.jsp为例，可以把代码脚本改成JSTL标签，把表达式脚本改成EL</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:forEach <span class="keyword">var</span>=<span class="string">&quot;stu&quot;</span> items=<span class="string">&quot;$&#123;stus&#125;&quot;</span>&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;$&#123;stu.id&#125;&lt;/td&gt;</span><br><span class="line"></span><br><span class="line">      &lt;td&gt;$&#123;stu.name&#125;&lt;/td&gt;</span><br><span class="line"></span><br><span class="line">      &lt;td&gt;$&#123;stu.age&#125; &lt;/td&gt;</span><br><span class="line"></span><br><span class="line">      &lt;td&gt;$&#123;stu.address&#125;&lt;/td&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">&lt;/c:forEach&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其它页面也按照这个思路去简化。</p>
 
       
 
@@ -474,7 +557,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/16/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL%E6%A0%87%E7%AD%BE%E5%BA%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -488,18 +571,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/07/12/js(%E5%8C%85%E6%8B%ACjQuery%E6%94%B9%E5%86%99)%E4%BD%9C%E4%B8%9A/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js(包括jQuery改写)作业
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">前端JS常见问题解决</div>
+    <a href="/2021/07/16/JSP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSP</div>
       <i class="icon-circle-right"></i>
     </a>
   
