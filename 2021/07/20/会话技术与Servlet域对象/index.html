@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | Hexo</title>
+  <title>会话技术与Servlet域对象 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2021/page/2/index.html">
+  <meta name="description" content="第5章：Servlet注解与会话技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="会话技术与Servlet域对象">
+<meta property="og:url" content="http://example.com/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第5章：Servlet注解与会话技术">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image002.jpg">
+<meta property="og:image" content="http://example.com/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image004.jpg">
+<meta property="og:image" content="http://example.com/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image006.jpg">
+<meta property="og:image" content="http://example.com/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image008.jpg">
+<meta property="og:image" content="http://example.com/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image010.jpg">
+<meta property="article:published_time" content="2021-07-20T15:25:09.000Z">
+<meta property="article:modified_time" content="2021-07-20T15:34:21.222Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image002.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -162,295 +172,276 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-会话技术与Servlet域对象" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      会话技术与Servlet域对象
+    </h1>
+  
+
+        
+        <a href="/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+  	<time datetime="2021-07-20T15:25:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-20</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第5章：Servlet注解与会话技术</p>
+<span id="more"></span>
+
+<h1 id="1-Servlet注解"><a href="#1-Servlet注解" class="headerlink" title="1 Servlet注解"></a>1 Servlet注解</h1><p> Servlet注解是从Servlet3.0开始支持的技术，使用Servlet注解可以代替传统的web.xml中的Servlet配置。Servlet开发分为基于XML配置与基于注解的两种方式，只能使用一种。</p>
+<h2 id="1-1-WebServlet"><a href="#1-1-WebServlet" class="headerlink" title="1.1 @WebServlet"></a>1.1 @WebServlet</h2><p> @WebServlet注解用在Servlet上，在servlet3.0以后不需要在web.xml中配置一个Servlet了，在类名上写注解就行，如@WebServlet(“/test.action”).</p>
+<p>注解支持属性，语法： @WebServlet(属性名=值 )</p>
+<p>通常此注解的name属性可以省略，value属性是配置Servlet的访问路径,可以支持多个路径</p>
+<p><img src="/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image002.jpg" alt="img"></p>
+<h2 id="1-2-Idea创建注解版的Servlet"><a href="#1-2-Idea创建注解版的Servlet" class="headerlink" title="1.2 Idea创建注解版的Servlet"></a>1.2 Idea创建注解版的Servlet</h2><p> 在创建servlet时，只需勾选下面的复选框</p>
+<p><img src="/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image004.jpg" alt="img"></p>
+<h2 id="1-3-实现学生管理项目的修改功能"><a href="#1-3-实现学生管理项目的修改功能" class="headerlink" title="1.3 实现学生管理项目的修改功能"></a>1.3 实现学生管理项目的修改功能</h2><h3 id="Servlet的优化-1个Servlet处理多个请求"><a href="#Servlet的优化-1个Servlet处理多个请求" class="headerlink" title="Servlet的优化(1个Servlet处理多个请求)"></a>Servlet的优化(1个Servlet处理多个请求)</h3><h1 id="2-会话技术"><a href="#2-会话技术" class="headerlink" title="2 会话技术"></a>2 会话技术</h1><h2 id="2-1-什么是会话"><a href="#2-1-什么是会话" class="headerlink" title="2.1 什么是会话"></a>2.1 什么是会话</h2><p>从打开一个浏览器访问某个站点，到关闭这个浏览器的整个过程，称为一次会话。</p>
+<p>如何理解？</p>
+<p>会话是浏览器与服务器之间的一次通信，它包含浏览器与服务器之间的多次请求、响应过程，浏览器关闭后本次会话结束。</p>
+<h2 id="2-2-什么是会话技术"><a href="#2-2-什么是会话技术" class="headerlink" title="2.2 什么是会话技术"></a>2.2 什么是会话技术</h2><p>在一次会话过程中跟踪每个请求，实现多个请求共享数据的技术称为会话技术，简单的说，会话技术就是记录一次会话过程中客户端的状态与数据的。</p>
+<p>例如：输入网址进入优酷，然后我在这优酷这个网站里面跳过来跳过去。</p>
+<p>访问的时候，这个会话就已经开始……</p>
+<p>关闭浏览器的时候，这个会话就结束……</p>
+<p><strong>会话技术分为Cookie和Session：</strong></p>
+<p>Cookie：数据存储在客户端本地，减少服务器端的存储压力，安全性不好，客户端 可以删除cookie</p>
+<p>Session：将数据存储到服务器端，安全性相对好，增加服务器的压力</p>
+<h1 id="3-Cookie"><a href="#3-Cookie" class="headerlink" title="3 Cookie"></a>3 Cookie</h1><h2 id="3-1-Cookie的原理"><a href="#3-1-Cookie的原理" class="headerlink" title="3.1 Cookie的原理"></a>3.1 Cookie的原理</h2><p>例：光谷广场有一个网吧是我开的，我要收费</p>
+<p>第一次来我这上网，我就为你办一张会员卡</p>
+<p>以后再来上网，直接出示会员卡，就可以进去上网了……</p>
+<p>Cookie的功能类似于这里的会员卡，当用户通过浏览器访问Web服务器时，服务器会创建一个存储了客户端信息的Cookie，并把Cookie发送给浏览器。当该浏览器再次访问服务器时，会将Cookie发送给服务器，服务器识别出“原来又是你”，从而对客户端作出响应。在服务器向浏览器发送Cookie时，会在HTTP响应头中增加一个名为Set-Cookie的响应头字段，该字段中设置的Cookie遵循一定的格式，示例如下：</p>
+<p> Set-Cookie: user=zhangsan</p>
+<p>上述示例中，user是Cookie的名称，zhangsan表示Cookie的值。需要注意的是，Cookie必须以键值对的形式存在。</p>
+<h2 id="3-2-Cookie的基本使用"><a href="#3-2-Cookie的基本使用" class="headerlink" title="3.2 Cookie的基本使用"></a>3.2 Cookie的基本使用</h2><p> Cookie是将用户的信息保存到客户端浏览器的技术，当再次访问服务器时，浏览器会自动携带Cookie来找服务器。简单的使用Cookie包含两个方面：</p>
+<p>第一、服务器怎样将Cookie发送给浏览器</p>
+<p>第二、服务器怎样接收浏览器携带的Cookie</p>
+<h3 id="3-2-1-服务器怎样把Cookie发送给浏览器"><a href="#3-2-1-服务器怎样把Cookie发送给浏览器" class="headerlink" title="3.2.1 服务器怎样把Cookie发送给浏览器"></a>3.2.1 服务器怎样把Cookie发送给浏览器</h3><p>1).服务器端创建Cookie</p>
+<p><strong>Cookie cookie = new Cookie(String cookieName,String cookieValue);</strong></p>
+<p>示例：</p>
+<p>Cookie cookie = new Cookie(“username”，”mike”);</p>
+<p>​     <strong>注意：Cookie默认是不能存储中文的</strong></p>
+<p>2）.将Cookie发送给浏览器</p>
+<p>   其实就是把Cookie添加到响应头里</p>
+<p>​    <strong>response.addCookie(Cookie cookie);</strong></p>
+<p><img src="/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image006.jpg" alt="img"></p>
+<h3 id="3-2-2-服务器端接收浏览器携带的Cookie"><a href="#3-2-2-服务器端接收浏览器携带的Cookie" class="headerlink" title="3.2.2 服务器端接收浏览器携带的Cookie"></a>3.2.2 服务器端接收浏览器携带的Cookie</h3><p> Cookie是以请求头方式发送到服务器端的，当第2次请求服务器时，就会在请求头中带上Cookie，该请求头的值包含了所有的Cookie</p>
+<p><img src="/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image008.jpg" alt="img"></p>
+<p>获取指定的Cookie分成2步：</p>
+<p>1）通过request获得所有的Cookie：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cookie[] cookies = request.getCookies();</span><br></pre></td></tr></table></figure>
+
+<p>2）遍历Cookie数组, 获得我们想要的Cookie(比较Cookie的名称)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Cookie cookie : cookies)&#123;</span><br><span class="line">    <span class="keyword">if</span>(cookie.getName().equals(cookieName))&#123;</span><br><span class="line">     <span class="keyword">return</span> cookie;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-3-Cookie深入学习"><a href="#3-3-Cookie深入学习" class="headerlink" title="3.3 Cookie深入学习"></a>3.3 Cookie深入学习</h2><h3 id="3-3-1-Cookie的分类"><a href="#3-3-1-Cookie的分类" class="headerlink" title="3.3.1 Cookie的分类"></a>3.3.1 Cookie的分类</h3><p>   Cookie分为会话级别Cookie和持久级别Cookie两大类。</p>
+<p>  1).会话级别Cookie: 默认级别，<strong>cookie存储在浏览器的内存中，当关闭浏览器，Cookie就销毁了</strong></p>
+<p>  2).持久级别Cookie: 即设置了Cookie有效时间,关闭浏览器也不会销毁的Cookie。</p>
+<h3 id="3-3-2-设置Cookie的有效时间"><a href="#3-3-2-设置Cookie的有效时间" class="headerlink" title="3.3.2 设置Cookie的有效时间"></a>3.3.2 设置Cookie的有效时间</h3><p> 设置Cookie在客户端的有效时间：</p>
+<p> setMaxAge(int expriry):以秒为单位的时间，超过该时间后Cookie会自动销毁。</p>
+<p>  设置了有效时间后，浏览器就会把cookie保存到硬盘上，关闭后再次打开浏览器，这些cookie依然有效,直到超过设定的过期时间。</p>
+<p><strong>Cookie默认的有效时间是-1，代表它是会话级别的</strong></p>
+<p><strong>setMaxAge(0):表示立即删除Cookie(不重启浏览器就能生效)</strong></p>
+<p>  示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cookie.setMaxAge(<span class="number">10</span>*<span class="number">60</span>);</span><br></pre></td></tr></table></figure>
+
+<p> 设置cookie信息在硬盘文件中存储的时间是10分钟，过期浏览器自动删除该cookie</p>
+<h3 id="3-3-3-设置Cookie的有效路径"><a href="#3-3-3-设置Cookie的有效路径" class="headerlink" title="3.3.3 设置Cookie的有效路径"></a>3.3.3 设置Cookie的有效路径</h3><p> <strong>有效路径：</strong>服务器在创建Cookie时可以指定一个路径，当浏览器访问这个路径下的资源时就会带上Cookie发送给服务器，此时在服务器端可接收Cookie信息。</p>
+<p>Cookie提供了setPath()方法去设置Cookie的有效路径，有如下几种情况：</p>
+<p>1.cookie.setPath(“/cookieWeb”): 表示cookieWeb工程下的所有web资源都可以访问当前Cookie</p>
+<p>2.cookie.setPath(“/cookieWeb/demo”): 表示cookieWeb工程下demo目录下所有web资源都可以访问当前Cookie。</p>
+<p>注意：</p>
+<p>1.Cookie默认有效路径是创建该Cookie的web资源所在的路径</p>
+<p>2.如果两个Cookie的Path和name都一样，两次调用addCookie()，后者会覆盖前者</p>
+<p><strong>案例：</strong></p>
+<p><strong>完成免用户名密码登录</strong></p>
+<h2 id="3-4-Cookie的问题"><a href="#3-4-Cookie的问题" class="headerlink" title="3.4 Cookie的问题"></a>3.4 Cookie的问题</h2><p>①不安全（cookie存在客户端）</p>
+<p>②不支持中文</p>
+<p>③Cookie是有大小限制的</p>
+<p>  Cookie大小限制在4KB之内；</p>
+<p>  * 一个浏览器最多可以保存300个Cookie；<br>    <strong>④Cookie不能操作对象</strong></p>
+<h1 id="4-Session"><a href="#4-Session" class="headerlink" title="4 Session"></a>4 Session</h1><h2 id="4-1-什么是Session"><a href="#4-1-什么是Session" class="headerlink" title="4.1 什么是Session?"></a>4.1 什么是Session?</h2><p> 举例:</p>
+<p>我开了一家旅馆，张三来住店，我把钥匙给张三，他把自己的东西放在他自己的房间后出去玩了，玩完之后回到旅馆，需要带着钥匙进他自己的房间。</p>
+<p> Session技术与以上例子相似，它是将数据存储在服务器端的技术，会为每个客户端创建一块内存空间用来存储客户的数据，同时给客户端发送一个存储了本次会话标识ID的Cookie，客户端需要用标识ID( jSessionId )去服务器中寻找属于自己的内存空间。所以说Session的实现是基于Cookie，Session需要借助于Cookie存储客户的唯一性标识JSESSIONID</p>
+<p> 图解：</p>
+<p><img src="/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/clip_image010.jpg" alt="img"></p>
+<p>对于Session我们需要学习如下三个问题：</p>
+<p>怎样获得属于当前会话的session对象（内存空间）？</p>
+<p>怎样向session中存取数据？</p>
+<p>session对象的生命周期？</p>
+<h2 id="4-2获得Session对象"><a href="#4-2获得Session对象" class="headerlink" title="4.2获得Session对象"></a>4.2获得Session对象</h2><p><strong>HttpSession session = request.getSession();</strong></p>
+<p>第1次请求服务器端的Servlet，且调用此方法会创建Session对象并返回此对象，之后再调用此方法则返回已有的Session（实质就是根据JSESSIONID判断该客户端是否在服务器上已经存在对应的session了）。如果是第1次请求JSP页面，web服务器会自动创建session(session是jsp的内置对象)，即已经获得了session对象。</p>
+<h2 id="4-3-怎样向session中存取数据"><a href="#4-3-怎样向session中存取数据" class="headerlink" title="4.3 怎样向session中存取数据"></a>4.3 怎样向session中存取数据</h2><p>Session和request一样，它也是存储数据的域对象，所以session对象也具有如下三个方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 以key/value方式存入数据：</span></span><br><span class="line">    session.setAttribute(String name,Object obj); </span><br><span class="line"><span class="comment">//2. 根据key取出数据：</span></span><br><span class="line">       session.getAttribute(String name);</span><br><span class="line"><span class="comment">//3. 删除数据：</span></span><br><span class="line">       session.removeAttribute(String name);</span><br></pre></td></tr></table></figure>
+
+
+
+<p> <strong>注意：</strong>将数据存储在request域对象中，则数据只能在一次请求中有效，即不能在多个请求之间共享数据，而session代表一次会话，存储在session中的数据可以在多个请求之间共享。实际项目中，通常将用户的重要信息存储在session中。</p>
+<h2 id="4-4-Session对象的生命周期"><a href="#4-4-Session对象的生命周期" class="headerlink" title="4.4 Session对象的生命周期"></a>4.4 Session对象的生命周期</h2><p>创建：第一次请求Servlet，且调用request.getSession()时创建；如果是第1次请求JSP页面,web服务器会自动创建session。</p>
+<p>销毁：sesion有如下三种“死法”</p>
+<p>1）服务器正常关闭时</p>
+<p>2）session过期（默认有效期是30分钟）</p>
+<p>Tomcat服务器的web.xml中配置了所有web工程的session的生存周期是30分钟</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span>      </span><br><span class="line">      <span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>30<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
+
+<p>  问题：时间的起算点,从何时开始计算30分钟？</p>
+<p>从不操作服务器端的资源开始计时，只要在有效期内操作了资源则从头计算</p>
+<p>   有效期的设置方法：</p>
+<p>​       a：在工程的web.xml中进行配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>20<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​      b：在程序中手动设置</p>
+<p>   调用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session.setMaxInactiveInterval(<span class="keyword">int</span>  i); <span class="comment">//单位是秒，如果值为零或负数，则表示会话将永远不会超时</span></span><br></pre></td></tr></table></figure>
+
+<p>​       3) 立即销毁session，即注销</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session.invalidate();</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="4-ServletConfig-了解"><a href="#4-ServletConfig-了解" class="headerlink" title="4 ServletConfig(了解)"></a>4 ServletConfig(了解)</h1><p>  ServletConfig是Servlet的配置对象，可以读取Servlet的初始化参数.</p>
+<p> 当Servlet中有成员变量需要初始化，但又不能直接在Servlet程序中写死，就可以在web.xml中配置Servlet的初始化参数，再通过ServletConfig对象读取初始化参数，把获取的值赋给Servlet成员变量。使用步骤：</p>
+<p> 1）在web.xml的Servlet标签中配置初始化参数</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置初始化参数 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>driverClass<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>  2）在Servlet程序的init方法中获取初始化参数的值，并赋给成员变量</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">    <span class="comment">//获取Servlet的初始化参数</span></span><br><span class="line">    String driverClass = config.getInitParameter(<span class="string">&quot;driverClass&quot;</span>);</span><br><span class="line">    <span class="comment">//赋值给变量</span></span><br><span class="line">    <span class="keyword">this</span>.driverClass = driverClass;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/16/JavaWeb%E5%B0%8F%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-07-16T09:19:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/16/JavaWeb%E5%B0%8F%E5%AD%A6%E4%B9%A0/">JavaWeb小学习</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/20/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF%E4%B8%8EServlet%E5%9F%9F%E5%AF%B9%E8%B1%A1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/12/js(%E5%8C%85%E6%8B%ACjQuery%E6%94%B9%E5%86%99)%E4%BD%9C%E4%B8%9A/" class="archive-article-date">
-  	<time datetime="2021-07-12T09:50:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/07/20/%E9%AA%8C%E8%AF%81%E7%A0%81%E5%AE%9E%E7%8E%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">验证码实现</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/12/js(%E5%8C%85%E6%8B%ACjQuery%E6%94%B9%E5%86%99)%E4%BD%9C%E4%B8%9A/">js(包括jQuery改写)作业</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-07-12T02:47:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/12/JQuery%E5%AD%A6%E4%B9%A0/">JQuery学习</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" class="archive-article-date">
-  	<time datetime="2021-07-09T15:29:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/09/%E5%89%8D%E7%AB%AFJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">前端JS常见问题解决</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/02/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-07-02T12:40:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/02/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">前端学习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/29/mysql%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2021-06-29T03:21:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/29/mysql%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">mysql相关操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/29/JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2021-06-29T02:18:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/29/JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/">JDBC工具类的封装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/10/%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B%E3%80%81%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E3%80%81%E7%89%A9%E7%90%86%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2021-06-09T16:19:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/10/%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B%E3%80%81%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E3%80%81%E7%89%A9%E7%90%86%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/">概念模型、逻辑模型、物理模型的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/01/Java%E5%8F%8D%E5%B0%84/" class="archive-article-date">
-  	<time datetime="2021-06-01T08:46:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/01/Java%E5%8F%8D%E5%B0%84/">Java反射</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/12/javeWeb%E9%A1%B9%E7%9B%AE%E4%B8%ADcss%E6%88%96js%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-05-12T10:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/12/javeWeb%E9%A1%B9%E7%9B%AE%E4%B8%ADcss%E6%88%96js%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/">javeWeb项目中css或js失效的问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2021/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2021/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2021/page/3/">3</a><a class="extend next" rel="next" href="/archives/2021/page/3/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -474,8 +465,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
